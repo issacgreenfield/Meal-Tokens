@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var snackTokens: UILabel!
     
     
-    @IBAction func workout15Button(sender!: UIButton)
+    @IBAction func workout15Button(sender: UIButton)
     {
         var digit: Int = sender.currentTitle!.toInt()!
 

@@ -13,6 +13,7 @@
 		C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C5913A1B2F908500EA0FD6 /* Images.xcassets */; };
 		C1C5913E1B2F908500EA0FD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C5913C1B2F908500EA0FD6 /* LaunchScreen.xib */; };
 		C1C5914A1B2F908500EA0FD6 /* Meal_TokensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591491B2F908500EA0FD6 /* Meal_TokensTests.swift */; };
+		C1C591541B2F910700EA0FD6 /* workoutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C591531B2F910700EA0FD6 /* workoutBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		C1C591431B2F908500EA0FD6 /* Meal TokensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal TokensTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C591481B2F908500EA0FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C591491B2F908500EA0FD6 /* Meal_TokensTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_TokensTests.swift; sourceTree = "<group>"; };
+		C1C591531B2F910700EA0FD6 /* workoutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = workoutBackground.png; path = ../../../../../Desktop/workoutBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C1C591351B2F908500EA0FD6 /* ViewController.swift */,
 				C1C591371B2F908500EA0FD6 /* Main.storyboard */,
 				C1C5913A1B2F908500EA0FD6 /* Images.xcassets */,
+				C1C591531B2F910700EA0FD6 /* workoutBackground.png */,
 				C1C5913C1B2F908500EA0FD6 /* LaunchScreen.xib */,
 				C1C591311B2F908500EA0FD6 /* Supporting Files */,
 			);
@@ -195,6 +198,7 @@
 				C1C591391B2F908500EA0FD6 /* Main.storyboard in Resources */,
 				C1C5913E1B2F908500EA0FD6 /* LaunchScreen.xib in Resources */,
 				C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */,
+				C1C591541B2F910700EA0FD6 /* workoutBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

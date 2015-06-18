@@ -72,29 +72,61 @@ class ViewController: UIViewController {
     
     @IBAction func eatSnackButton(sender: UIButton)
     {
-        if tokenCalculator! > 0
-        {
-        tokenCalculator = tokenCalculator! - 1
-        mealTokens.text = String(tokenCalculator! / 4)
-        snackTokens.text = String(tokenCalculator! % 4)
-        }
+        var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Ok logic here")
+            
+            if self.tokenCalculator! > 0
+            {
+                self.tokenCalculator = self.tokenCalculator! - 1
+                self.mealTokens.text = String(self.tokenCalculator! / 4)
+                self.snackTokens.text = String(self.tokenCalculator! % 4)
+            }else
+            {
+                self.displaySadNoTokenMessage()
+            }
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Cancel Logic here")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
     @IBAction func eatMealButton(sender: UIButton)
     {
-        if tokenCalculator! >= 4
-        {
-        tokenCalculator = tokenCalculator! - 4
-        mealTokens.text = String(tokenCalculator! / 4)
-        snackTokens.text = String(tokenCalculator! % 4)
-        }
+        var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Ok logic here")
+            
+            if self.tokenCalculator! >= 4
+            {
+                self.tokenCalculator = self.tokenCalculator! - 4
+                self.mealTokens.text = String(self.tokenCalculator! / 4)
+                self.snackTokens.text = String(self.tokenCalculator! % 4)
+            }else
+            {
+                self.displaySadNoTokenMessage()
+            }
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Cancel Logic here")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
-    
-    
-    
-    
-    
+    func displaySadNoTokenMessage()
+    {
+        let alertController = UIAlertController(title: "Oh No!!!", message:
+            "You haven't worked out enough!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "I think I'll cry instead", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

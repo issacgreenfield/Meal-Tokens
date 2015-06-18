@@ -21,112 +21,26 @@ class ViewController: UIViewController {
     @IBAction func workout15Button(sender: UIButton)
     {
         tokenAddBrain(sender.currentTitle!.toInt()!)
-        
-//        var digit: Int = sender.currentTitle!.toInt()!
-//
-//        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for 15 minutes?", preferredStyle: UIAlertControllerStyle.Alert)
-//        
-//        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
-//            //println("Handle Ok logic here")
-//            switch digit
-//            {
-//            case 15:
-//                self.tokenCalculator = self.tokenCalculator! + 1
-//            case 30:
-//                self.tokenCalculator = self.tokenCalculator! + 2
-//            case 45:
-//                self.tokenCalculator = self.tokenCalculator! + 3
-//            case 60:
-//                self.tokenCalculator = self.tokenCalculator! + 4
-//            default:
-//                break
-//            }
-//            self.mealTokens.text = String(self.tokenCalculator! / 4)
-//            self.snackTokens.text = String(self.tokenCalculator! % 4)
-//        }))
-//        
-//        refreshAlert.addAction(UIAlertAction(title: "Blch... no", style: .Default, handler: { (action: UIAlertAction!) in
-//            //println("Handle Cancel Logic here")
-//        }))
-//        
-//        presentViewController(refreshAlert, animated: true, completion: nil)
-        
     }
     
     @IBAction func workout30Button(sender: UIButton)
     {
-        var digit: Int = sender.currentTitle!.toInt()!
-        
-        switch digit
-        {
-        case 15:
-            tokenCalculator = tokenCalculator! + 1
-        case 30:
-            tokenCalculator = tokenCalculator! + 2
-        case 45:
-            tokenCalculator = tokenCalculator! + 3
-        case 60:
-            tokenCalculator = tokenCalculator! + 4
-        default:
-            break
-        }
-        
-        mealTokens.text = String(tokenCalculator! / 4)
-        snackTokens.text = String(tokenCalculator! % 4)
-
+        tokenAddBrain(sender.currentTitle!.toInt()!)
     }
     
     @IBAction func workout45Button(sender: UIButton)
     {
-        var digit: Int = sender.currentTitle!.toInt()!
-        
-        switch digit
-        {
-        case 15:
-            tokenCalculator = tokenCalculator! + 1
-        case 30:
-            tokenCalculator = tokenCalculator! + 2
-        case 45:
-            tokenCalculator = tokenCalculator! + 3
-        case 60:
-            tokenCalculator = tokenCalculator! + 4
-        default:
-            break
-        }
-        
-        mealTokens.text = String(tokenCalculator! / 4)
-        snackTokens.text = String(tokenCalculator! % 4)
-
+        tokenAddBrain(sender.currentTitle!.toInt()!)
     }
     
     @IBAction func workout60Button(sender: UIButton)
     {
-        var digit: Int = sender.currentTitle!.toInt()!
-        
-        switch digit
-        {
-        case 15:
-            tokenCalculator = tokenCalculator! + 1
-        case 30:
-            tokenCalculator = tokenCalculator! + 2
-        case 45:
-            tokenCalculator = tokenCalculator! + 3
-        case 60:
-            tokenCalculator = tokenCalculator! + 4
-        default:
-            break
-        }
-        
-        mealTokens.text = String(tokenCalculator! / 4)
-        snackTokens.text = String(tokenCalculator! % 4)
-
+        tokenAddBrain(sender.currentTitle!.toInt()!)
     }
     
     func tokenAddBrain(digit: Int)
     {
-        
-        
-        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for 15 minutes?", preferredStyle: UIAlertControllerStyle.Alert)
+        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(digit) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
             //println("Handle Ok logic here")
@@ -153,13 +67,7 @@ class ViewController: UIViewController {
         
         presentViewController(refreshAlert, animated: true, completion: nil)
         
-        
-        
-        
     }
-    
-    
-    
     
     
     @IBAction func eatSnackButton(sender: UIButton)
@@ -176,7 +84,7 @@ class ViewController: UIViewController {
     {
         if tokenCalculator! >= 4
         {
-        tokenCalculator! = tokenCalculator! - 4
+        tokenCalculator = tokenCalculator! - 4
         mealTokens.text = String(tokenCalculator! / 4)
         snackTokens.text = String(tokenCalculator! % 4)
         }

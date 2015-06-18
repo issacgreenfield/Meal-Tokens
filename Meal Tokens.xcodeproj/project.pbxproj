@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1AAEA6D1B335B3A0090D3F3 /* coin-drop-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C1AAEA6C1B335B3A0090D3F3 /* coin-drop-1.wav */; };
+		C1AAEA6F1B335D850090D3F3 /* burp-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C1AAEA6E1B335D850090D3F3 /* burp-1.wav */; };
 		C1C591341B2F908500EA0FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591331B2F908500EA0FD6 /* AppDelegate.swift */; };
 		C1C591361B2F908500EA0FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591351B2F908500EA0FD6 /* ViewController.swift */; };
 		C1C591391B2F908500EA0FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C591371B2F908500EA0FD6 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1AAEA6C1B335B3A0090D3F3 /* coin-drop-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-drop-1.wav"; sourceTree = "<group>"; };
+		C1AAEA6E1B335D850090D3F3 /* burp-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "burp-1.wav"; sourceTree = "<group>"; };
 		C1C5912E1B2F908500EA0FD6 /* Meal Tokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Tokens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C591321B2F908500EA0FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C591331B2F908500EA0FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		C1C591311B2F908500EA0FD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C1AAEA6E1B335D850090D3F3 /* burp-1.wav */,
+				C1AAEA6C1B335B3A0090D3F3 /* coin-drop-1.wav */,
 				C1C591321B2F908500EA0FD6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -196,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C591391B2F908500EA0FD6 /* Main.storyboard in Resources */,
+				C1AAEA6D1B335B3A0090D3F3 /* coin-drop-1.wav in Resources */,
 				C1C5913E1B2F908500EA0FD6 /* LaunchScreen.xib in Resources */,
+				C1AAEA6F1B335D850090D3F3 /* burp-1.wav in Resources */,
 				C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */,
 				C1C591541B2F910700EA0FD6 /* workoutBackground.png in Resources */,
 			);
@@ -413,6 +421,7 @@
 				C1C5914F1B2F908500EA0FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1C591501B2F908500EA0FD6 /* Build configuration list for PBXNativeTarget "Meal TokensTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				C1C591521B2F908500EA0FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

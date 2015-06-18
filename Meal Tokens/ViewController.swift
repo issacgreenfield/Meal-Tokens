@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -59,6 +60,15 @@ class ViewController: UIViewController {
             }
             self.mealTokens.text = String(self.tokenCalculator! / 4)
             self.snackTokens.text = String(self.tokenCalculator! % 4)
+            
+            //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
+            // Load
+            let soundURL = NSBundle.mainBundle().URLForResource("coin-drop-1", withExtension: "wav")
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL, &mySound)
+            
+            // Play
+            AudioServicesPlaySystemSound(mySound);
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Blch... no", style: .Default, handler: { (action: UIAlertAction!) in
@@ -82,6 +92,16 @@ class ViewController: UIViewController {
                 self.tokenCalculator = self.tokenCalculator! - 1
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
+                
+                //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
+                // Load
+                let soundURL = NSBundle.mainBundle().URLForResource("burp-1", withExtension: "wav")
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                
+                // Play
+                AudioServicesPlaySystemSound(mySound);
+
             }else
             {
                 self.displaySadNoTokenMessage()
@@ -107,6 +127,16 @@ class ViewController: UIViewController {
                 self.tokenCalculator = self.tokenCalculator! - 4
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
+                
+                //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
+                // Load
+                let soundURL = NSBundle.mainBundle().URLForResource("burp-1", withExtension: "wav")
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                
+                // Play
+                AudioServicesPlaySystemSound(mySound);
+
             }else
             {
                 self.displaySadNoTokenMessage()

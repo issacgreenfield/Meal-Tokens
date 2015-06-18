@@ -20,34 +20,36 @@ class ViewController: UIViewController {
     
     @IBAction func workout15Button(sender: UIButton)
     {
-        var digit: Int = sender.currentTitle!.toInt()!
-
-        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for 15 minutes?", preferredStyle: UIAlertControllerStyle.Alert)
+        tokenAddBrain(sender.currentTitle!.toInt()!)
         
-        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Ok logic here")
-            switch digit
-            {
-            case 15:
-                self.tokenCalculator = self.tokenCalculator! + 1
-            case 30:
-                self.tokenCalculator = self.tokenCalculator! + 2
-            case 45:
-                self.tokenCalculator = self.tokenCalculator! + 3
-            case 60:
-                self.tokenCalculator = self.tokenCalculator! + 4
-            default:
-                break
-            }
-            self.mealTokens.text = String(self.tokenCalculator! / 4)
-            self.snackTokens.text = String(self.tokenCalculator! % 4)
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Blch... no", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Cancel Logic here")
-        }))
-        
-        presentViewController(refreshAlert, animated: true, completion: nil)
+//        var digit: Int = sender.currentTitle!.toInt()!
+//
+//        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for 15 minutes?", preferredStyle: UIAlertControllerStyle.Alert)
+//        
+//        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
+//            //println("Handle Ok logic here")
+//            switch digit
+//            {
+//            case 15:
+//                self.tokenCalculator = self.tokenCalculator! + 1
+//            case 30:
+//                self.tokenCalculator = self.tokenCalculator! + 2
+//            case 45:
+//                self.tokenCalculator = self.tokenCalculator! + 3
+//            case 60:
+//                self.tokenCalculator = self.tokenCalculator! + 4
+//            default:
+//                break
+//            }
+//            self.mealTokens.text = String(self.tokenCalculator! / 4)
+//            self.snackTokens.text = String(self.tokenCalculator! % 4)
+//        }))
+//        
+//        refreshAlert.addAction(UIAlertAction(title: "Blch... no", style: .Default, handler: { (action: UIAlertAction!) in
+//            //println("Handle Cancel Logic here")
+//        }))
+//        
+//        presentViewController(refreshAlert, animated: true, completion: nil)
         
     }
     
@@ -119,6 +121,46 @@ class ViewController: UIViewController {
         snackTokens.text = String(tokenCalculator! % 4)
 
     }
+    
+    func tokenAddBrain(digit: Int)
+    {
+        
+        
+        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for 15 minutes?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Ok logic here")
+            switch digit
+            {
+            case 15:
+                self.tokenCalculator = self.tokenCalculator! + 1
+            case 30:
+                self.tokenCalculator = self.tokenCalculator! + 2
+            case 45:
+                self.tokenCalculator = self.tokenCalculator! + 3
+            case 60:
+                self.tokenCalculator = self.tokenCalculator! + 4
+            default:
+                break
+            }
+            self.mealTokens.text = String(self.tokenCalculator! / 4)
+            self.snackTokens.text = String(self.tokenCalculator! % 4)
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Blch... no", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Cancel Logic here")
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     
     @IBAction func eatSnackButton(sender: UIButton)
     {

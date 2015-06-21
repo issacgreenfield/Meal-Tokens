@@ -341,6 +341,23 @@
                                     <constraint firstItem="mHb-fx-xU7" firstAttribute="leading" secondItem="0VC-pg-jWA" secondAttribute="leading" id="qfa-Ql-bAm"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0r-lS-n9W">
+                                <rect key="frame" x="253" y="570" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.81924715910000001" green="0.1047152619" blue="0.072305097930000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KJV-8h-27E"/>
+                                    <constraint firstAttribute="width" constant="95" id="pId-g2-iEk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" red="0.23153409089999999" green="0.03816209475" blue="0.042455661630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="etc-K5-o2B" kind="modal" id="KCg-vR-nvK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98905070908038295" green="1" blue="0.97708729407354489" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.87374597104641949" green="1" blue="0.95316304529522045" alpha="0.34000000000000002" colorSpace="calibratedRGB"/>
@@ -350,6 +367,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="crt-2w-Eid" secondAttribute="trailing" constant="-17" id="GLO-QV-q0z"/>
                             <constraint firstItem="sMI-c2-yCq" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Jdn-LU-DXa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sMI-c2-yCq" secondAttribute="trailing" constant="-22" id="Jpx-ob-Ciw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="g0r-lS-n9W" secondAttribute="bottom" id="Ky4-Mx-hFg"/>
                             <constraint firstItem="sMI-c2-yCq" firstAttribute="centerX" secondItem="Eau-cp-PG6" secondAttribute="centerX" id="Ltu-Wy-Yi6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P1O-Yf-eIX" secondAttribute="trailing" constant="-16" id="OVr-84-QVU"/>
                             <constraint firstItem="crt-2w-Eid" firstAttribute="centerX" secondItem="0rQ-UF-lp9" secondAttribute="centerX" id="P8S-Rl-xQM"/>
@@ -366,6 +384,7 @@
                             <constraint firstAttribute="centerX" secondItem="cW6-iZ-QDI" secondAttribute="centerX" id="nCn-MJ-gbe"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="crt-2w-Eid" secondAttribute="bottom" id="pfM-o4-kO0"/>
                             <constraint firstAttribute="centerY" secondItem="cW6-iZ-QDI" secondAttribute="centerY" id="pp2-S6-KOO"/>
+                            <constraint firstAttribute="centerX" secondItem="g0r-lS-n9W" secondAttribute="centerX" id="u4N-On-sWN"/>
                             <constraint firstItem="crt-2w-Eid" firstAttribute="centerY" secondItem="0rQ-UF-lp9" secondAttribute="centerY" id="u9I-fA-m9s"/>
                             <constraint firstItem="0VC-pg-jWA" firstAttribute="centerX" secondItem="X0M-pj-zxQ" secondAttribute="centerX" id="uua-gD-Mit"/>
                             <constraint firstItem="0VC-pg-jWA" firstAttribute="centerY" secondItem="X0M-pj-zxQ" secondAttribute="centerY" id="yWv-6b-3gd"/>
@@ -379,6 +398,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="389" y="292"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d0W-ry-XGy">
+            <objects>
+                <viewController id="etc-K5-o2B" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aBR-5V-rU7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ytG-sD-mFl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="80B-YG-GwP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workoutBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="M47-r8-r6x">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-El-Ng8">
+                                <rect key="frame" x="278" y="564" width="45" height="36"/>
+                                <color key="backgroundColor" red="0.81924715910000001" green="0.1047152619" blue="0.072305097930000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.23153409089999999" green="0.03816209475" blue="0.042455661630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="wZT-0L-oYP"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Pd-8Op" userLabel="CenterView">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evH-Sv-MAg">
+                                        <rect key="frame" x="5" y="0.0" width="240" height="250"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.23153409089999999" green="0.03816209475" blue="0.042455661630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="XQz-5D-e1U"/>
+                                    <constraint firstAttribute="width" constant="250" id="h17-2a-5fW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98905070910000004" green="1" blue="0.97708729409999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="2hC-El-Ng8" secondAttribute="centerX" id="5Qp-fv-RI6"/>
+                            <constraint firstAttribute="centerX" secondItem="M47-r8-r6x" secondAttribute="centerX" id="9GJ-nc-4n2"/>
+                            <constraint firstAttribute="centerY" secondItem="M47-r8-r6x" secondAttribute="centerY" id="9YU-O5-WBK"/>
+                            <constraint firstItem="ytG-sD-mFl" firstAttribute="top" secondItem="M47-r8-r6x" secondAttribute="bottom" id="CBb-3m-PDg"/>
+                            <constraint firstAttribute="centerY" secondItem="3A5-Pd-8Op" secondAttribute="centerY" id="CIa-34-qq1"/>
+                            <constraint firstItem="M47-r8-r6x" firstAttribute="leading" secondItem="80B-YG-GwP" secondAttribute="leadingMargin" constant="-16" id="eLQ-Dy-yGk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M47-r8-r6x" secondAttribute="trailing" constant="-16" id="f6S-KH-z8f"/>
+                            <constraint firstItem="ytG-sD-mFl" firstAttribute="top" secondItem="2hC-El-Ng8" secondAttribute="bottom" id="fcm-Xc-o9e"/>
+                            <constraint firstAttribute="centerX" secondItem="3A5-Pd-8Op" secondAttribute="centerX" id="l7X-qr-DOY"/>
+                            <constraint firstItem="M47-r8-r6x" firstAttribute="top" secondItem="80B-YG-GwP" secondAttribute="topMargin" id="ov6-mx-6ni"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCT-3K-Zf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="292"/>
         </scene>
     </scenes>
     <resources>

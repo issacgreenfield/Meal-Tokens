@@ -342,7 +342,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.62921678544446713" green="1" blue="0.96608670091802107" alpha="0.34000000000000002" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98905070908038295" green="1" blue="0.97708729407354489" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.87374597104641949" green="1" blue="0.95316304529522045" alpha="0.34000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gIP-c2-ThT" firstAttribute="centerX" secondItem="9lw-ZO-23g" secondAttribute="centerX" id="9tN-m5-KBo"/>
                             <constraint firstItem="0VC-pg-jWA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9wc-KX-F5u"/>
@@ -383,4 +384,5 @@
     <resources>
         <image name="workoutBackground.png" width="1242" height="2208"/>
     </resources>
+    <color key="tintColor" red="0.27482140977637082" green="1" blue="0.89987790578285765" alpha="1" colorSpace="calibratedRGB"/>
 </document>

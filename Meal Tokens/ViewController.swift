@@ -63,7 +63,7 @@ class ViewController: UIViewController {
             
             //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
             // Load
-            let soundURL = NSBundle.mainBundle().URLForResource("coin-drop-1", withExtension: "wav")
+            let soundURL = NSBundle.mainBundle().URLForResource("coindropA", withExtension: "wav")
             var mySound: SystemSoundID = 0
             AudioServicesCreateSystemSoundID(soundURL, &mySound)
             

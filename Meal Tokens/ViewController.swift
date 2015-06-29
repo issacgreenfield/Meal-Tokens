@@ -82,13 +82,14 @@ class ViewController: UIViewController {
     
     @IBAction func eatSnackButton(sender: UIButton)
     {
+        if self.tokenCalculator! > 0
+        {
         var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
             //println("Handle Ok logic here")
             
-            if self.tokenCalculator! > 0
-            {
+            
                 self.tokenCalculator = self.tokenCalculator! - 1
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
@@ -102,10 +103,7 @@ class ViewController: UIViewController {
                 // Play
                 AudioServicesPlaySystemSound(mySound);
 
-            }else
-            {
-                self.displaySadNoTokenMessage()
-            }
+            
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
@@ -113,17 +111,22 @@ class ViewController: UIViewController {
         }))
         
         presentViewController(refreshAlert, animated: true, completion: nil)
+        }else
+        {
+            self.displaySadNoTokenMessage()
+        }
     }
     
     @IBAction func eatMealButton(sender: UIButton)
     {
+        if self.tokenCalculator! >= 4
+        {
         var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
             //println("Handle Ok logic here")
             
-            if self.tokenCalculator! >= 4
-            {
+            
                 self.tokenCalculator = self.tokenCalculator! - 4
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
@@ -137,10 +140,7 @@ class ViewController: UIViewController {
                 // Play
                 AudioServicesPlaySystemSound(mySound);
 
-            }else
-            {
-                self.displaySadNoTokenMessage()
-            }
+            
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
@@ -148,6 +148,10 @@ class ViewController: UIViewController {
         }))
         
         presentViewController(refreshAlert, animated: true, completion: nil)
+        }else
+        {
+            self.displaySadNoTokenMessage()
+        }
     }
     
     func displaySadNoTokenMessage()

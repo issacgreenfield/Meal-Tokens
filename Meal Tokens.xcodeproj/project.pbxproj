@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C194167E1B41F53200389A6F /* coindropA.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194167D1B41F53200389A6F /* coindropA.wav */; };
-		C1AAEA6D1B335B3A0090D3F3 /* coin-drop-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C1AAEA6C1B335B3A0090D3F3 /* coin-drop-1.wav */; };
-		C1AAEA6F1B335D850090D3F3 /* burp-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C1AAEA6E1B335D850090D3F3 /* burp-1.wav */; };
+		C194E3EF1B424009009A7D28 /* nomnom.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194E3EE1B424009009A7D28 /* nomnom.wav */; };
 		C1C591341B2F908500EA0FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591331B2F908500EA0FD6 /* AppDelegate.swift */; };
 		C1C591361B2F908500EA0FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591351B2F908500EA0FD6 /* ViewController.swift */; };
 		C1C591391B2F908500EA0FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C591371B2F908500EA0FD6 /* Main.storyboard */; };
@@ -31,8 +30,7 @@
 
 /* Begin PBXFileReference section */
 		C194167D1B41F53200389A6F /* coindropA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coindropA.wav; sourceTree = "<group>"; };
-		C1AAEA6C1B335B3A0090D3F3 /* coin-drop-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-drop-1.wav"; sourceTree = "<group>"; };
-		C1AAEA6E1B335D850090D3F3 /* burp-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "burp-1.wav"; sourceTree = "<group>"; };
+		C194E3EE1B424009009A7D28 /* nomnom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nomnom.wav; sourceTree = "<group>"; };
 		C1C5912E1B2F908500EA0FD6 /* Meal Tokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Tokens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C591321B2F908500EA0FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C591331B2F908500EA0FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,9 +97,8 @@
 		C1C591311B2F908500EA0FD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C194E3EE1B424009009A7D28 /* nomnom.wav */,
 				C194167D1B41F53200389A6F /* coindropA.wav */,
-				C1AAEA6E1B335D850090D3F3 /* burp-1.wav */,
-				C1AAEA6C1B335B3A0090D3F3 /* coin-drop-1.wav */,
 				C1C591321B2F908500EA0FD6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,9 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C591391B2F908500EA0FD6 /* Main.storyboard in Resources */,
-				C1AAEA6D1B335B3A0090D3F3 /* coin-drop-1.wav in Resources */,
+				C194E3EF1B424009009A7D28 /* nomnom.wav in Resources */,
 				C1C5913E1B2F908500EA0FD6 /* LaunchScreen.xib in Resources */,
-				C1AAEA6F1B335D850090D3F3 /* burp-1.wav in Resources */,
 				C194167E1B41F53200389A6F /* coindropA.wav in Resources */,
 				C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */,
 				C1C591541B2F910700EA0FD6 /* workoutBackground.png in Resources */,

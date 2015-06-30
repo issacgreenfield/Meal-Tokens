@@ -12,7 +12,19 @@ import AVFoundation
 class ViewController: UIViewController {
     
     private var tokenCalculator: Int? = 0
-    
+
+//    private let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+//    var money = defaults.valueForKey("money") as? String
+//    dollarLabel.text! = money
+//    
+//    @IBAction func MoneyPress(sender: AnyObject) {
+//        Money += 1
+//        var MoneyNumberString:String = String(format: "Dollars:%i", Money)
+//        self.DollarsLabel.text = (string: MoneyNumberString)
+//        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults() //This class     variable needs to be defined every class where you set or fetch values from NSUserDefaults
+//        defaults.setObject(MoneyNumberString, forKey: "money")
+//        defaults.synchronize() //Call when you're done editing all defaults for the method.
+//    }
     
     @IBOutlet weak var mealTokens: UILabel!
     
@@ -84,33 +96,33 @@ class ViewController: UIViewController {
     {
         if self.tokenCalculator! > 0
         {
-        var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Ok logic here")
+            var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
             
-            
+            refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
+                //println("Handle Ok logic here")
+                
+                
                 self.tokenCalculator = self.tokenCalculator! - 1
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
                 
                 //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
                 // Load
-                let soundURL = NSBundle.mainBundle().URLForResource("burp-1", withExtension: "wav")
+                let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
                 var mySound: SystemSoundID = 0
                 AudioServicesCreateSystemSoundID(soundURL, &mySound)
                 
                 // Play
                 AudioServicesPlaySystemSound(mySound);
-
+                
+                
+            }))
             
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Cancel Logic here")
-        }))
-        
-        presentViewController(refreshAlert, animated: true, completion: nil)
+            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+                //println("Handle Cancel Logic here")
+            }))
+            
+            presentViewController(refreshAlert, animated: true, completion: nil)
         }else
         {
             self.displaySadNoTokenMessage()
@@ -121,33 +133,33 @@ class ViewController: UIViewController {
     {
         if self.tokenCalculator! >= 4
         {
-        var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Ok logic here")
+            var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
             
-            
+            refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
+                //println("Handle Ok logic here")
+                
+                
                 self.tokenCalculator = self.tokenCalculator! - 4
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
                 
                 //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
                 // Load
-                let soundURL = NSBundle.mainBundle().URLForResource("burp-1", withExtension: "wav")
+                let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
                 var mySound: SystemSoundID = 0
                 AudioServicesCreateSystemSoundID(soundURL, &mySound)
                 
                 // Play
                 AudioServicesPlaySystemSound(mySound);
-
+                
+                
+            }))
             
-        }))
-        
-        refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Cancel Logic here")
-        }))
-        
-        presentViewController(refreshAlert, animated: true, completion: nil)
+            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+                //println("Handle Cancel Logic here")
+            }))
+            
+            presentViewController(refreshAlert, animated: true, completion: nil)
         }else
         {
             self.displaySadNoTokenMessage()
@@ -161,17 +173,19 @@ class ViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "I think I'll cry instead", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        // Do any additional setup after loading the view, typically from a nib.
+//        self.mealTokens.text = String(self.tokenCalculator! / 4)
+//        self.snackTokens.text = String(self.tokenCalculator! % 4)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

@@ -10,21 +10,18 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-    
-    private var tokenCalculator: Int? = 0
 
-//    private let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-//    var money = defaults.valueForKey("money") as? String
-//    dollarLabel.text! = money
-//    
-//    @IBAction func MoneyPress(sender: AnyObject) {
-//        Money += 1
-//        var MoneyNumberString:String = String(format: "Dollars:%i", Money)
-//        self.DollarsLabel.text = (string: MoneyNumberString)
-//        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults() //This class     variable needs to be defined every class where you set or fetch values from NSUserDefaults
-//        defaults.setObject(MoneyNumberString, forKey: "money")
-//        defaults.synchronize() //Call when you're done editing all defaults for the method.
-//    }
+    private var tokenCalculator: Int? = 0
+    
+    func savingData()
+    {
+        var defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(tokenCalculator!, forKey: "tokens")
+    }
+    func loadingData()
+    {
+    }
+    
     
     @IBOutlet weak var mealTokens: UILabel!
     
@@ -34,25 +31,30 @@ class ViewController: UIViewController {
     @IBAction func workout15Button(sender: UIButton)
     {
         tokenAddBrain(sender.currentTitle!.toInt()!)
+        savingData()
     }
     
     @IBAction func workout30Button(sender: UIButton)
     {
         tokenAddBrain(sender.currentTitle!.toInt()!)
+        savingData()
     }
     
     @IBAction func workout45Button(sender: UIButton)
     {
         tokenAddBrain(sender.currentTitle!.toInt()!)
+        savingData()
     }
     
     @IBAction func workout60Button(sender: UIButton)
     {
         tokenAddBrain(sender.currentTitle!.toInt()!)
+        savingData()
     }
     
     func tokenAddBrain(digit: Int)
     {
+        
         var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(digit) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
@@ -105,6 +107,7 @@ class ViewController: UIViewController {
                 self.tokenCalculator = self.tokenCalculator! - 1
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
+                self.savingData()
                 
                 //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
                 // Load
@@ -142,6 +145,7 @@ class ViewController: UIViewController {
                 self.tokenCalculator = self.tokenCalculator! - 4
                 self.mealTokens.text = String(self.tokenCalculator! / 4)
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
+                self.savingData()
                 
                 //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
                 // Load
@@ -176,9 +180,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//        self.mealTokens.text = String(self.tokenCalculator! / 4)
-//        self.snackTokens.text = String(self.tokenCalculator! % 4)
+        var defaults = NSUserDefaults.standardUserDefaults()
+        
+        if (defaults.objectForKey("tokens") != nil) {
+            tokenCalculator = defaults.integerForKey("tokens")
+//            bluetoothSwitch.on = defaults.boolForKey("SwitchState")
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -18,8 +18,11 @@ class ViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(tokenCalculator!, forKey: "tokens")
     }
+    
     func loadingData()
     {
+        self.mealTokens.text = String(self.tokenCalculator! / 4)
+        self.snackTokens.text = String(self.tokenCalculator! % 4)
     }
     
     
@@ -30,31 +33,35 @@ class ViewController: UIViewController {
     
     @IBAction func workout15Button(sender: UIButton)
     {
+        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
         savingData()
     }
     
     @IBAction func workout30Button(sender: UIButton)
     {
+        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
         savingData()
     }
     
     @IBAction func workout45Button(sender: UIButton)
     {
+        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
         savingData()
     }
     
     @IBAction func workout60Button(sender: UIButton)
     {
+        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
         savingData()
     }
     
     func tokenAddBrain(digit: Int)
     {
-        
+        loadingData()
         var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(digit) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
@@ -96,6 +103,7 @@ class ViewController: UIViewController {
     
     @IBAction func eatSnackButton(sender: UIButton)
     {
+        loadingData()
         if self.tokenCalculator! > 0
         {
             var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -134,6 +142,7 @@ class ViewController: UIViewController {
     
     @IBAction func eatMealButton(sender: UIButton)
     {
+        loadingData()
         if self.tokenCalculator! >= 4
         {
             var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -184,8 +193,8 @@ class ViewController: UIViewController {
         
         if (defaults.objectForKey("tokens") != nil) {
             tokenCalculator = defaults.integerForKey("tokens")
-//            bluetoothSwitch.on = defaults.boolForKey("SwitchState")
         }
+        loadingData()
     }
     
     override func didReceiveMemoryWarning() {

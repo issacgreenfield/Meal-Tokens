@@ -30,7 +30,7 @@
                     <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aph-Va-qU1">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aph-Va-qU1">
                     <rect key="frame" x="115" y="200" width="250" height="200"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -47,9 +47,9 @@
             <constraints>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
                 <constraint firstAttribute="centerX" secondItem="raq-He-9xB" secondAttribute="centerX" id="6ND-fU-Ek3"/>
+                <constraint firstItem="aph-Va-qU1" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="17" id="HgM-lY-ZuK"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="6" id="LD9-wb-pDq"/>
-                <constraint firstItem="aph-Va-qU1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="300" id="Lkv-e0-wbJ"/>
                 <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="20" id="M2T-be-udD"/>
                 <constraint firstAttribute="centerY" secondItem="raq-He-9xB" secondAttribute="centerY" id="OdY-ry-N9z"/>
                 <constraint firstAttribute="bottom" secondItem="raq-He-9xB" secondAttribute="bottom" id="VfQ-yj-Rgj"/>

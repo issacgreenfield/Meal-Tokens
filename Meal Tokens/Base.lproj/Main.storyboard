@@ -26,8 +26,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEj-aI-X6S" userLabel="MealView">
                                         <rect key="frame" x="132" y="37" width="110" height="175"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meal Tokens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-fj-Mkv">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Tokens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-fj-Mkv">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" red="0.23153409089999999" green="0.03816209475" blue="0.042455661630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -77,8 +77,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-Nh-bTb" userLabel="SnackView">
                                         <rect key="frame" x="8" y="37" width="110" height="175"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Snack Tokens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mz-qF-Hms">
-                                                <rect key="frame" x="0.0" y="0.0" width="110" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snack Tokens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mz-qF-Hms">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" red="0.23153409089999999" green="0.03816209475" blue="0.042455661630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -140,8 +140,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-c2-ThT" userLabel="15View">
                                 <rect key="frame" x="0.0" y="20" width="150" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nY-aE-73j">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nY-aE-73j">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="QO7-0c-Rxm"/>
                                         </constraints>
@@ -150,8 +150,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-zG-YSE">
-                                        <rect key="frame" x="0.0" y="130" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsH-zG-YSE">
+                                        <rect key="frame" x="0.0" y="129" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="s4C-Ou-zwj"/>
                                         </constraints>
@@ -199,8 +199,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMI-c2-yCq" userLabel="30View">
                                 <rect key="frame" x="456" y="20" width="150" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-aw-6Bp">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldN-aw-6Bp">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="vjE-68-fZk"/>
                                         </constraints>
@@ -209,8 +209,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-23-5Dt">
-                                        <rect key="frame" x="0.0" y="130" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-23-5Dt">
+                                        <rect key="frame" x="0.0" y="129" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="qg2-Gd-3Oz"/>
                                         </constraints>
@@ -250,8 +250,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crt-2w-Eid" userLabel="60View">
                                 <rect key="frame" x="451" y="450" width="150" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqA-oE-Ze2">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqA-oE-Ze2">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="kPO-XV-vP2"/>
                                         </constraints>
@@ -260,8 +260,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oG-Na-Jn0">
-                                        <rect key="frame" x="0.0" y="130" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oG-Na-Jn0">
+                                        <rect key="frame" x="0.0" y="129" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="gxg-n8-eF0"/>
                                             <constraint firstAttribute="width" constant="150" id="m57-ly-wr2"/>
@@ -303,8 +303,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0VC-pg-jWA" userLabel="45View">
                                 <rect key="frame" x="0.0" y="450" width="150" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWi-qL-nW9">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWi-qL-nW9">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="R4h-4j-uF1"/>
                                         </constraints>
@@ -313,8 +313,8 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHb-fx-xU7">
-                                        <rect key="frame" x="0.0" y="130" width="150" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHb-fx-xU7">
+                                        <rect key="frame" x="0.0" y="129" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="ImS-sE-wxF"/>
                                         </constraints>
@@ -366,7 +366,7 @@
                                     <color key="titleShadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="etc-K5-o2B" kind="modal" modalTransitionStyle="flipHorizontal" id="KCg-vR-nvK"/>
+                                    <segue destination="etc-K5-o2B" kind="showDetail" id="KCg-vR-nvK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -436,7 +436,7 @@
                                     <color key="titleShadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="wZT-0L-oYP"/>
+                                    <segue destination="vXZ-lx-hvc" kind="showDetail" id="wZT-0L-oYP"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-Pd-8Op" userLabel="CenterView">
@@ -449,7 +449,7 @@
                                             <constraint firstAttribute="width" constant="200" id="nBr-kZ-9cm"/>
                                             <constraint firstAttribute="height" constant="175" id="wsT-P1-k0E"/>
                                         </constraints>
-                                        <string key="text">Instructions for use: Simply set rules for your diet based on  healthy choices. In order to get cheats from your set diet, workout then enter the times into this app. The more you workout the more cheats you get!</string>
+                                        <string key="text">Instructions for use: Simply set rules for your diet based on  healthy choices. In order to get cheats from your set diet, workout, then enter the times into this app. The more you workout the more cheats you get!</string>
                                         <color key="textColor" red="0.23153409089999999" green="0.03816209475" blue="0.042455661630000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

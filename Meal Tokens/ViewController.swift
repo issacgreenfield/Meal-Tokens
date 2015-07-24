@@ -12,6 +12,8 @@ import AVFoundation
 class ViewController: UIViewController {
 
     private var tokenCalculator: Int? = 0
+    private let hardness: Int = 8
+    private let tokenWeight: Int = 8
     
     func savingData()
     {

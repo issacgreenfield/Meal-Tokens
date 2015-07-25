@@ -64,7 +64,7 @@
                                             <constraint firstAttribute="width" constant="110" id="6Hp-m1-KQb"/>
                                             <constraint firstAttribute="centerY" secondItem="ngx-hK-jLR" secondAttribute="centerY" id="80M-o0-SwI"/>
                                             <constraint firstItem="zF6-32-LLj" firstAttribute="leading" secondItem="rEj-aI-X6S" secondAttribute="leading" constant="8" id="DeI-3N-djK"/>
-                                            <constraint firstAttribute="height" constant="175" id="Pju-6b-axD"/>
+                                            <constraint firstAttribute="height" constant="140" id="L57-IG-wPF"/>
                                             <constraint firstAttribute="centerX" secondItem="ngx-hK-jLR" secondAttribute="centerX" id="S8Z-cz-kpE"/>
                                             <constraint firstAttribute="trailing" secondItem="zF6-32-LLj" secondAttribute="trailing" constant="8" id="UKo-0h-K8g"/>
                                             <constraint firstAttribute="bottom" secondItem="zF6-32-LLj" secondAttribute="bottom" id="gLn-dE-Qki"/>
@@ -73,6 +73,16 @@
                                             <constraint firstItem="mzl-fj-Mkv" firstAttribute="top" secondItem="rEj-aI-X6S" secondAttribute="top" id="kgJ-MH-KxW"/>
                                             <constraint firstAttribute="centerX" secondItem="zF6-32-LLj" secondAttribute="centerX" id="xky-uo-6qo"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="L57-IG-wPF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="L57-IG-wPF"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAB-Nh-bTb" userLabel="SnackView">
                                         <rect key="frame" x="8" y="37" width="110" height="175"/>
@@ -113,29 +123,51 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ihM-an-YUt" secondAttribute="trailing" constant="8" id="1eR-VR-5hL"/>
-                                            <constraint firstAttribute="height" constant="175" id="5YV-Qp-9z7"/>
+                                            <constraint firstAttribute="bottom" secondItem="ihM-an-YUt" secondAttribute="bottom" id="2kR-0b-qAK"/>
                                             <constraint firstAttribute="centerY" secondItem="o3b-MO-7nG" secondAttribute="centerY" id="6S6-M5-Ukt"/>
+                                            <constraint firstAttribute="height" constant="140" id="8Rq-o8-9ok"/>
                                             <constraint firstAttribute="centerX" secondItem="ihM-an-YUt" secondAttribute="centerX" id="BQZ-2h-fQt"/>
                                             <constraint firstItem="ihM-an-YUt" firstAttribute="leading" secondItem="hAB-Nh-bTb" secondAttribute="leading" constant="8" id="GnH-Ih-xaP"/>
                                             <constraint firstItem="9mz-qF-Hms" firstAttribute="leading" secondItem="hAB-Nh-bTb" secondAttribute="leading" id="OOg-EE-u6h"/>
-                                            <constraint firstAttribute="bottom" secondItem="ihM-an-YUt" secondAttribute="bottom" id="X7w-7j-NRd"/>
                                             <constraint firstAttribute="width" constant="110" id="ZwE-fQ-HOh"/>
                                             <constraint firstItem="9mz-qF-Hms" firstAttribute="top" secondItem="hAB-Nh-bTb" secondAttribute="top" id="doT-uH-MVt"/>
                                             <constraint firstAttribute="centerX" secondItem="9mz-qF-Hms" secondAttribute="centerX" id="gVs-EP-gDO"/>
                                             <constraint firstAttribute="trailing" secondItem="9mz-qF-Hms" secondAttribute="trailing" id="qji-nc-mb1"/>
                                             <constraint firstAttribute="centerX" secondItem="o3b-MO-7nG" secondAttribute="centerX" id="yrr-4R-dMh"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8Rq-o8-9ok"/>
+                                                <exclude reference="2kR-0b-qAK"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="8Rq-o8-9ok"/>
+                                                <include reference="2kR-0b-qAK"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="34U-dv-JNI"/>
                                     <constraint firstItem="hAB-Nh-bTb" firstAttribute="top" secondItem="cW6-iZ-QDI" secondAttribute="top" constant="37" id="A06-8U-FlG"/>
-                                    <constraint firstAttribute="height" constant="250" id="UFN-r0-tLY"/>
                                     <constraint firstItem="rEj-aI-X6S" firstAttribute="trailing" secondItem="cW6-iZ-QDI" secondAttribute="trailingMargin" id="iCh-1X-ZCr"/>
                                     <constraint firstItem="hAB-Nh-bTb" firstAttribute="top" secondItem="rEj-aI-X6S" secondAttribute="top" id="iv6-F8-qsU"/>
                                     <constraint firstItem="hAB-Nh-bTb" firstAttribute="leading" secondItem="cW6-iZ-QDI" secondAttribute="leadingMargin" id="kOJ-yV-hXu"/>
+                                    <constraint firstAttribute="height" constant="200" id="uLl-OE-02y"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uLl-OE-02y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="uLl-OE-02y"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-c2-ThT" userLabel="15View">
                                 <rect key="frame" x="0.0" y="20" width="150" height="150"/>

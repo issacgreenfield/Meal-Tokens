@@ -12,8 +12,6 @@ import AVFoundation
 class ViewController: UIViewController {
 
     private var tokenCalculator: Int? = 0
-    private let hardness: Int = 8
-    private let tokenWeight: Int = 8
     
     func savingData()
     {
@@ -94,7 +92,7 @@ class ViewController: UIViewController {
             AudioServicesPlaySystemSound(mySound);
         }))
         
-        refreshAlert.addAction(UIAlertAction(title: "Blch... no", style: .Default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction!) in
             //println("Handle Cancel Logic here")
         }))
         

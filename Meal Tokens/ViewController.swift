@@ -106,7 +106,7 @@ class ViewController: UIViewController {
         loadingData()
         if self.tokenCalculator! > 0
         {
-            var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
+            var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a snack?", preferredStyle: UIAlertControllerStyle.Alert)
             
             refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
                 //println("Handle Ok logic here")

@@ -64,6 +64,10 @@ class ViewController: UIViewController {
         loadingData()
         var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(digit) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
         
+        refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction!) in
+            //println("Handle Cancel Logic here")
+        }))
+        
         refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
             //println("Handle Ok logic here")
             switch digit
@@ -92,10 +96,6 @@ class ViewController: UIViewController {
             AudioServicesPlaySystemSound(mySound);
         }))
         
-        refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction!) in
-            //println("Handle Cancel Logic here")
-        }))
-        
         presentViewController(refreshAlert, animated: true, completion: nil)
         
     }
@@ -107,6 +107,10 @@ class ViewController: UIViewController {
         if self.tokenCalculator! > 0
         {
             var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a snack?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+                //println("Handle Cancel Logic here")
+            }))
             
             refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
                 //println("Handle Ok logic here")
@@ -125,12 +129,6 @@ class ViewController: UIViewController {
                 
                 // Play
                 AudioServicesPlaySystemSound(mySound);
-                
-                
-            }))
-            
-            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
-                //println("Handle Cancel Logic here")
             }))
             
             presentViewController(refreshAlert, animated: true, completion: nil)
@@ -146,6 +144,10 @@ class ViewController: UIViewController {
         if self.tokenCalculator! >= 4
         {
             var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+                //println("Handle Cancel Logic here")
+            }))
             
             refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
                 //println("Handle Ok logic here")
@@ -166,10 +168,6 @@ class ViewController: UIViewController {
                 AudioServicesPlaySystemSound(mySound);
                 
                 
-            }))
-            
-            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
-                //println("Handle Cancel Logic here")
             }))
             
             presentViewController(refreshAlert, animated: true, completion: nil)

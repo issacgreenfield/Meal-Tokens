@@ -10,13 +10,14 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     private var tokenCalculator: Int? = 0
     
     func savingData()
     {
         var defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(tokenCalculator!, forKey: "tokens")
+        loadingData()
     }
     
     func loadingData()
@@ -33,30 +34,22 @@ class ViewController: UIViewController {
     
     @IBAction func workout15Button(sender: UIButton)
     {
-        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
-        savingData()
     }
     
     @IBAction func workout30Button(sender: UIButton)
     {
-        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
-        savingData()
     }
     
     @IBAction func workout45Button(sender: UIButton)
     {
-        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
-        savingData()
     }
     
     @IBAction func workout60Button(sender: UIButton)
     {
-        loadingData()
         tokenAddBrain(sender.currentTitle!.toInt()!)
-        savingData()
     }
     
     func tokenAddBrain(digit: Int)
@@ -83,10 +76,8 @@ class ViewController: UIViewController {
             default:
                 break
             }
-            self.mealTokens.text = String(self.tokenCalculator! / 4)
-            self.snackTokens.text = String(self.tokenCalculator! % 4)
+            self.savingData()
             
-            //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
             // Load
             let soundURL = NSBundle.mainBundle().URLForResource("coindropA", withExtension: "wav")
             var mySound: SystemSoundID = 0
@@ -121,7 +112,6 @@ class ViewController: UIViewController {
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
                 self.savingData()
                 
-                //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
                 // Load
                 let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
                 var mySound: SystemSoundID = 0
@@ -130,7 +120,6 @@ class ViewController: UIViewController {
                 // Play
                 AudioServicesPlaySystemSound(mySound);
             }))
-            
             presentViewController(refreshAlert, animated: true, completion: nil)
         }else
         {
@@ -158,7 +147,6 @@ class ViewController: UIViewController {
                 self.snackTokens.text = String(self.tokenCalculator! % 4)
                 self.savingData()
                 
-                //This is to add sound http://stackoverflow.com/questions/24043904/creating-and-playing-a-sound-in-swift
                 // Load
                 let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
                 var mySound: SystemSoundID = 0
@@ -166,8 +154,6 @@ class ViewController: UIViewController {
                 
                 // Play
                 AudioServicesPlaySystemSound(mySound);
-                
-                
             }))
             
             presentViewController(refreshAlert, animated: true, completion: nil)
@@ -192,12 +178,11 @@ class ViewController: UIViewController {
         if (defaults.objectForKey("tokens") != nil) {
             tokenCalculator = defaults.integerForKey("tokens")
         }
-        loadingData()
+        savingData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     

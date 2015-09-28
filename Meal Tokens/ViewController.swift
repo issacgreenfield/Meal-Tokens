@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     func savingData()
     {
-        var defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(tokenCalculator!, forKey: "tokens")
         loadingData()
     }
@@ -34,34 +34,34 @@ class ViewController: UIViewController {
     
     @IBAction func workout15Button(sender: UIButton)
     {
-        tokenAddBrain(sender.currentTitle!.toInt()!)
+        tokenAddBrain(Int(sender.currentTitle!)!)
     }
     
     @IBAction func workout30Button(sender: UIButton)
     {
-        tokenAddBrain(sender.currentTitle!.toInt()!)
+        tokenAddBrain(Int(sender.currentTitle!)!)
     }
     
     @IBAction func workout45Button(sender: UIButton)
     {
-        tokenAddBrain(sender.currentTitle!.toInt()!)
+        tokenAddBrain(Int(sender.currentTitle!)!)
     }
     
     @IBAction func workout60Button(sender: UIButton)
     {
-        tokenAddBrain(sender.currentTitle!.toInt()!)
+        tokenAddBrain(Int(sender.currentTitle!)!)
     }
     
     func tokenAddBrain(digit: Int)
     {
         loadingData()
-        var refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(digit) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
+        let refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(digit) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
         
-        refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction) in
             //println("Handle Cancel Logic here")
         }))
         
-        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction!) in
+        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction) in
             //println("Handle Ok logic here")
             switch digit
             {
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
             // Load
             let soundURL = NSBundle.mainBundle().URLForResource("coindropA", withExtension: "wav")
             var mySound: SystemSoundID = 0
-            AudioServicesCreateSystemSoundID(soundURL, &mySound)
+            AudioServicesCreateSystemSoundID(soundURL!, &mySound)
             
             // Play
             AudioServicesPlaySystemSound(mySound);
@@ -97,13 +97,13 @@ class ViewController: UIViewController {
         loadingData()
         if self.tokenCalculator! > 0
         {
-            var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a snack?", preferredStyle: UIAlertControllerStyle.Alert)
+            let refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a snack?", preferredStyle: UIAlertControllerStyle.Alert)
             
-            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction) in
                 //println("Handle Cancel Logic here")
             }))
             
-            refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
+            refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction) in
                 //println("Handle Ok logic here")
                 
                 
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
                 // Load
                 let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
                 var mySound: SystemSoundID = 0
-                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                AudioServicesCreateSystemSoundID(soundURL!, &mySound)
                 
                 // Play
                 AudioServicesPlaySystemSound(mySound);
@@ -132,13 +132,13 @@ class ViewController: UIViewController {
         loadingData()
         if self.tokenCalculator! >= 4
         {
-            var refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
+            let refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
             
-            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction!) in
+            refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction) in
                 //println("Handle Cancel Logic here")
             }))
             
-            refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction!) in
+            refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction) in
                 //println("Handle Ok logic here")
                 
                 
@@ -150,7 +150,7 @@ class ViewController: UIViewController {
                 // Load
                 let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
                 var mySound: SystemSoundID = 0
-                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                AudioServicesCreateSystemSoundID(soundURL!, &mySound)
                 
                 // Play
                 AudioServicesPlaySystemSound(mySound);
@@ -173,7 +173,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = NSUserDefaults.standardUserDefaults()
         
         if (defaults.objectForKey("tokens") != nil) {
             tokenCalculator = defaults.integerForKey("tokens")

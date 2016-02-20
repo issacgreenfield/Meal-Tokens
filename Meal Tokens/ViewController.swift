@@ -11,6 +11,37 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     private var tokenCalculator: Int? = 0
     
     func savingData()

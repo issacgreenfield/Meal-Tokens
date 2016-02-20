@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11EB42E1C77CC670052BCB3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11EB42D1C77CC670052BCB3 /* Media.xcassets */; };
 		C14303091B4742D800C71707 /* workoutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C14303081B4742D800C71707 /* workoutBackground.png */; };
 		C143030B1B47432A00C71707 /* WorkoutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C143030A1B47432A00C71707 /* WorkoutIcon.png */; };
 		C194167E1B41F53200389A6F /* coindropA.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194167D1B41F53200389A6F /* coindropA.wav */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C11EB42D1C77CC670052BCB3 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		C14303081B4742D800C71707 /* workoutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workoutBackground.png; sourceTree = "<group>"; };
 		C143030A1B47432A00C71707 /* WorkoutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WorkoutIcon.png; sourceTree = "<group>"; };
 		C194167D1B41F53200389A6F /* coindropA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coindropA.wav; sourceTree = "<group>"; };
@@ -64,6 +66,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C11EB4261C77C7EF0052BCB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C11EB4271C77C7F70052BCB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1C591371B2F908500EA0FD6 /* Main.storyboard */,
+				C1C5913C1B2F908500EA0FD6 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C11EB4281C77C7FF0052BCB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C1C591351B2F908500EA0FD6 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C11EB4291C77C86F0052BCB3 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		C11EB42A1C77C88B0052BCB3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C14303081B4742D800C71707 /* workoutBackground.png */,
+				C143030A1B47432A00C71707 /* WorkoutIcon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		C1C591251B2F908500EA0FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +127,13 @@
 		C1C591301B2F908500EA0FD6 /* Meal Tokens */ = {
 			isa = PBXGroup;
 			children = (
+				C11EB4281C77C7FF0052BCB3 /* Controller */,
+				C11EB4271C77C7F70052BCB3 /* View */,
+				C11EB4261C77C7EF0052BCB3 /* Model */,
 				C1C591331B2F908500EA0FD6 /* AppDelegate.swift */,
-				C1C591351B2F908500EA0FD6 /* ViewController.swift */,
-				C1C591371B2F908500EA0FD6 /* Main.storyboard */,
 				C1C5913A1B2F908500EA0FD6 /* Images.xcassets */,
-				C14303081B4742D800C71707 /* workoutBackground.png */,
-				C143030A1B47432A00C71707 /* WorkoutIcon.png */,
-				C1C5913C1B2F908500EA0FD6 /* LaunchScreen.xib */,
 				C1C591311B2F908500EA0FD6 /* Supporting Files */,
+				C11EB42D1C77CC670052BCB3 /* Media.xcassets */,
 			);
 			path = "Meal Tokens";
 			sourceTree = "<group>";
@@ -100,6 +141,8 @@
 		C1C591311B2F908500EA0FD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C11EB42A1C77C88B0052BCB3 /* Images */,
+				C11EB4291C77C86F0052BCB3 /* Sounds */,
 				C194E3EE1B424009009A7D28 /* nomnom.wav */,
 				C194167D1B41F53200389A6F /* coindropA.wav */,
 				C1C591321B2F908500EA0FD6 /* Info.plist */,
@@ -213,6 +256,7 @@
 				C194167E1B41F53200389A6F /* coindropA.wav in Resources */,
 				C14303091B4742D800C71707 /* workoutBackground.png in Resources */,
 				C143030B1B47432A00C71707 /* WorkoutIcon.png in Resources */,
+				C11EB42E1C77CC670052BCB3 /* Media.xcassets in Resources */,
 				C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

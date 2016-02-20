@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="711-6P-c5w">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -51,9 +51,6 @@
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="15" y="31" width="80" height="80"/>
-                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Meal Tokens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzl-fj-Mkv">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="21"/>
@@ -115,9 +112,6 @@
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="1" green="0.16158553210000001" blue="0.29319475589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
-                                                <variation key="widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="15" y="31" width="80" height="80"/>
-                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Snack Tokens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mz-qF-Hms">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="21"/>
@@ -526,8 +520,84 @@
             </objects>
             <point key="canvasLocation" x="1188" y="284"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="9ME-uA-5nA">
+            <objects>
+                <viewController id="GsP-mx-tod" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xym-K9-VVT"/>
+                        <viewControllerLayoutGuide type="bottom" id="81V-57-df5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TcO-vv-nlt">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="150-cogs.png" id="14a-ap-yaL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfi-Ge-7ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321.5" y="1931"/>
+        </scene>
+        <!--Stats-->
+        <scene sceneID="qNt-Hl-kHL">
+            <objects>
+                <viewController storyboardIdentifier="StatsView" id="hk6-s6-IMq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6xk-z7-DVb"/>
+                        <viewControllerLayoutGuide type="bottom" id="LiZ-Ox-bOE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e65-Fi-ZJ8">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stats" image="157-stats-bars.png" id="q3V-Wj-YCA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B94-aI-cU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321.5" y="2889"/>
+        </scene>
+        <!--Tokens-->
+        <scene sceneID="s53-oT-vbg">
+            <objects>
+                <viewController id="iIc-Xh-YcP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1mZ-bl-hup"/>
+                        <viewControllerLayoutGuide type="bottom" id="CsJ-eS-58w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wfk-mO-Kcz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tokens" image="026-diamonds.png" id="gV5-jd-cgS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2I-53-E8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321.5" y="1005"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WOO-6O-e6u">
+            <objects>
+                <tabBarController id="711-6P-c5w" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="A1o-Sv-WbI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iIc-Xh-YcP" kind="relationship" relationship="viewControllers" id="oNF-gN-wou"/>
+                        <segue destination="hk6-s6-IMq" kind="relationship" relationship="viewControllers" id="5hH-7h-aTU"/>
+                        <segue destination="GsP-mx-tod" kind="relationship" relationship="viewControllers" id="56m-go-mZK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaJ-T9-n6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-565.5" y="1919"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="026-diamonds.png" width="16" height="16"/>
+        <image name="150-cogs.png" width="16" height="16"/>
+        <image name="157-stats-bars.png" width="16" height="16"/>
         <image name="workoutBackground.png" width="1242" height="2208"/>
     </resources>
     <color key="tintColor" red="0.27482140977637082" green="1" blue="0.89987790578285765" alpha="1" colorSpace="calibratedRGB"/>

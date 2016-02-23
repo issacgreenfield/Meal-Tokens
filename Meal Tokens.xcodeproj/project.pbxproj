@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C11EB42E1C77CC670052BCB3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11EB42D1C77CC670052BCB3 /* Media.xcassets */; };
+		C11EB4821C79515F0052BCB3 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11EB47D1C7950F50052BCB3 /* Charts.framework */; };
+		C11EB4831C79515F0052BCB3 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C11EB47D1C7950F50052BCB3 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C14303091B4742D800C71707 /* workoutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C14303081B4742D800C71707 /* workoutBackground.png */; };
 		C143030B1B47432A00C71707 /* WorkoutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C143030A1B47432A00C71707 /* WorkoutIcon.png */; };
 		C194167E1B41F53200389A6F /* coindropA.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194167D1B41F53200389A6F /* coindropA.wav */; };
@@ -21,6 +23,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C11EB47C1C7950F50052BCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		C11EB47E1C7950F50052BCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		C11EB4801C7950F50052BCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		C11EB4841C79515F0052BCB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
 		C1C591441B2F908500EA0FD6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C1C591261B2F908500EA0FD6 /* Project object */;
@@ -30,8 +60,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C11EB4691C78FFC30052BCB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C11EB4831C79515F0052BCB3 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C11EB42D1C77CC670052BCB3 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../iOS Resources/Charts/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		C14303081B4742D800C71707 /* workoutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workoutBackground.png; sourceTree = "<group>"; };
 		C143030A1B47432A00C71707 /* WorkoutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WorkoutIcon.png; sourceTree = "<group>"; };
 		C194167D1B41F53200389A6F /* coindropA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coindropA.wav; sourceTree = "<group>"; };
@@ -53,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11EB4821C79515F0052BCB3 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +152,20 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		C11EB4771C7950F50052BCB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C11EB47D1C7950F50052BCB3 /* Charts.framework */,
+				C11EB47F1C7950F50052BCB3 /* Charts.framework */,
+				C11EB4811C7950F50052BCB3 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C1C591251B2F908500EA0FD6 = {
 			isa = PBXGroup;
 			children = (
+				C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */,
 				C1C591301B2F908500EA0FD6 /* Meal Tokens */,
 				C1C591461B2F908500EA0FD6 /* Meal TokensTests */,
 				C1C5912F1B2F908500EA0FD6 /* Products */,
@@ -177,10 +234,12 @@
 				C1C5912A1B2F908500EA0FD6 /* Sources */,
 				C1C5912B1B2F908500EA0FD6 /* Frameworks */,
 				C1C5912C1B2F908500EA0FD6 /* Resources */,
+				C11EB4691C78FFC30052BCB3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C11EB4851C79515F0052BCB3 /* PBXTargetDependency */,
 			);
 			name = "Meal Tokens";
 			productName = "Meal Tokens";
@@ -237,6 +296,12 @@
 			mainGroup = C1C591251B2F908500EA0FD6;
 			productRefGroup = C1C5912F1B2F908500EA0FD6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C11EB4771C7950F50052BCB3 /* Products */;
+					ProjectRef = C11EB4761C7950F50052BCB3 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C1C5912D1B2F908500EA0FD6 /* Meal Tokens */,
@@ -244,6 +309,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C11EB47D1C7950F50052BCB3 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = C11EB47C1C7950F50052BCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C11EB47F1C7950F50052BCB3 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = C11EB47E1C7950F50052BCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C11EB4811C7950F50052BCB3 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = C11EB4801C7950F50052BCB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C1C5912C1B2F908500EA0FD6 /* Resources */ = {
@@ -291,6 +380,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C11EB4851C79515F0052BCB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = C11EB4841C79515F0052BCB3 /* PBXContainerItemProxy */;
+		};
 		C1C591451B2F908500EA0FD6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1C5912D1B2F908500EA0FD6 /* Meal Tokens */;
@@ -338,6 +432,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -383,6 +479,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -406,11 +504,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Meal Tokens/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "IssacGreenfield.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -420,11 +522,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Meal Tokens/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "IssacGreenfield.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

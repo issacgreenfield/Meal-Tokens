@@ -14,6 +14,7 @@ class TokensViewController: UIViewController {
     
     private var tokenCalculator: Double? = 0.0
     private var tokenDificulty: Double? = 1.0
+    let defaults = NSUserDefaults.standardUserDefaults()
 
     
     @IBOutlet weak var cheatTokensNumber: UILabel!
@@ -33,7 +34,7 @@ class TokensViewController: UIViewController {
                 //println("Handle Ok logic here")
                 
                 
-                self.tokenCalculator = self.tokenCalculator! - (1 * self.tokenDificulty!)
+                self.tokenCalculator = self.tokenCalculator! - self.tokenDificulty!
                 self.savingData()
                 
                 // Load
@@ -71,53 +72,24 @@ class TokensViewController: UIViewController {
         }
         tokenAddBrain(selectedButton)
     }
-    
-    
-//    @IBAction func eatMealButton(sender: UIButton)
-//            {
-//                loadingData()
-//                if self.tokenCalculator! >= 4
-//                {
-//                    let refreshAlert = UIAlertController(title: "Are You sure", message: "you want to eat a meal?", preferredStyle: UIAlertControllerStyle.Alert)
-//        
-//                    refreshAlert.addAction(UIAlertAction(title: "Hmm... nah", style: .Default, handler: { (action: UIAlertAction) in
-//                        //println("Handle Cancel Logic here")
-//                    }))
-//        
-//                    refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction) in
-//                        //println("Handle Ok logic here")
-//        
-//        
-//                        self.tokenCalculator = self.tokenCalculator! - 4
-//                        self.savingData()
-//        
-//                        // Load
-//                        let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
-//                        var mySound: SystemSoundID = 0
-//                        AudioServicesCreateSystemSoundID(soundURL!, &mySound)
-//        
-//                        // Play
-//                        AudioServicesPlaySystemSound(mySound);
-//                    }))
-//        
-//                    presentViewController(refreshAlert, animated: true, completion: nil)
-//                }else
-//                {
-//                    self.displaySadNoTokenMessage()
-//                }
-//            }
-
 
     func savingData()
     {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setDouble(tokenCalculator!, forKey: "tokens")
         loadingData()
     }
 
     func loadingData()
         {
-    //        self.numberOfTokensLabel.text = String(self.tokenCalculator! % self.dificultyLevel)
+            
+            if (defaults.objectForKey("dificulty") != nil) {
+                if (defaults.stringForKey("dificulty") == "hard")
+                {
+                    tokenDificulty = 2.0
+                } else
+                {
+                    tokenDificulty = 1.0
+                }
+            }
             cheatTokensNumber.text = String(Int(tokenCalculator! / tokenDificulty!))
         }
 
@@ -147,9 +119,9 @@ class TokensViewController: UIViewController {
                     case 2:
                         self.tokenCalculator = self.tokenCalculator! + 2
                     case 3:
-                        self.tokenCalculator = self.tokenCalculator! + 3
+                        self.tokenCalculator = self.tokenCalculator! + 1
                     case 4:
-                        self.tokenCalculator = self.tokenCalculator! + 4
+                        self.tokenCalculator = self.tokenCalculator! + 2
                     default:
                         break
                     }
@@ -172,19 +144,24 @@ class TokensViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
+//        defaults.setValue("easy", forKey: "dificulty")
         if (defaults.objectForKey("tokens") != nil) {
             tokenCalculator = defaults.doubleForKey("tokens")
+        } else
+        {
+            defaults.setValue(0.0, forKey: "tokens")
         }
         if (defaults.objectForKey("dificulty") != nil) {
-            if (defaults.boolForKey("dificulty") == true)
+            if (defaults.stringForKey("dificulty") == "hard")
             {
                 tokenDificulty = 2.0
+            } else
+            {
+                tokenDificulty = 1.0
             }
         } else
         {
-            defaults.setValue("dificulty", forKey: "0")
+            defaults.setValue("easy", forKey: "dificulty")
         }
 
         savingData()

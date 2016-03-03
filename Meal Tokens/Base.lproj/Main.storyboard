@@ -177,50 +177,71 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmn-Nh-fRp" userLabel="1">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="1" image="WorkoutIcon.png"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addTokensButtons:" destination="iIc-Xh-YcP" eventType="touchUpInside" id="tKG-m3-1p8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOr-Fd-O0J" userLabel="2">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="2" image="WorkoutIcon.png"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhy-PR-RL8" userLabel="NumberTopRight">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJ7-qd-hLB" userLabel="NumberTopLeft">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="310" y="47" width="40" height="66"/>
-                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOr-Fd-O0J" userLabel="2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addTokensButtons:" destination="iIc-Xh-YcP" eventType="touchUpInside" id="dcs-2r-xUD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vhy-PR-RL8" userLabel="NumberTopRight">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0y-Hj-W5U" userLabel="3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="3" image="WorkoutIcon.png"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTokensButtons:" destination="iIc-Xh-YcP" eventType="touchUpInside" id="EHR-ey-U92"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig2-Au-hg4" userLabel="NumberBottomLeft">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ig2-Au-hg4" userLabel="NumberBottomLeft">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="428" width="40" height="66"/>
-                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDj-PL-UN2" userLabel="BottomRightButton">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDj-PL-UN2" userLabel="4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="4" image="WorkoutIcon.png"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTokensButtons:" destination="iIc-Xh-YcP" eventType="touchUpInside" id="D0C-8V-Yxo"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-rN-5XL" userLabel="4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-rN-5XL" userLabel="NumberBottomRight">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="310" y="428" width="40" height="66"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eo-1C-3CZ" userLabel="CheatTokensButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -229,49 +250,44 @@
                                     <action selector="cheatButtonPressed:" destination="iIc-Xh-YcP" eventType="touchUpInside" id="bzX-Xa-bnZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheat Tokens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-nJ-dru" userLabel="CheatTokensLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheat Tokens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-nJ-dru" userLabel="CheatTokensLabel">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-wr-eyz" userLabel="NumberOfTokensLabel">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAO-bG-R18">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S50-fd-4Df">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-Qx-0ta">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzQ-cN-rqn">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ7-qd-hLB" userLabel="NumberTopLeft">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="47" width="40" height="66"/>
+                                    <rect key="frame" x="140" y="368" width="120" height="20.5"/>
                                 </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-wr-eyz" userLabel="NumberOfTokensLabel">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AAO-bG-R18">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="S50-fd-4Df">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qj4-Qx-0ta">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lzQ-cN-rqn">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -347,6 +363,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Zmn-Nh-fRp"/>
+                                <exclude reference="fJ7-qd-hLB"/>
                                 <exclude reference="nOr-Fd-O0J"/>
                                 <exclude reference="Vhy-PR-RL8"/>
                                 <exclude reference="w0y-Hj-W5U"/>
@@ -360,30 +377,40 @@
                                 <exclude reference="S50-fd-4Df"/>
                                 <exclude reference="Qj4-Qx-0ta"/>
                                 <exclude reference="lzQ-cN-rqn"/>
-                                <exclude reference="fJ7-qd-hLB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5Sx-j6-LDb"/>
-                                <exclude reference="AuL-JO-Zvu"/>
-                                <exclude reference="W7a-Qi-gsS"/>
-                                <exclude reference="Yru-QD-N94"/>
-                                <exclude reference="MaL-jp-eyO"/>
-                                <exclude reference="dkW-5O-rEh"/>
-                                <exclude reference="gtD-gX-xf0"/>
-                                <exclude reference="clY-2l-tPd"/>
-                                <exclude reference="ey1-qx-f3x"/>
-                                <exclude reference="rBu-gc-CbV"/>
+                                <exclude reference="396-yS-lpT"/>
+                                <exclude reference="xwr-lD-s5U"/>
                                 <exclude reference="KCe-aL-sDN"/>
                                 <exclude reference="foF-4a-mj9"/>
                                 <exclude reference="nKn-bM-or8"/>
                                 <exclude reference="rwP-cm-c5D"/>
+                                <exclude reference="5Sx-j6-LDb"/>
+                                <exclude reference="AuL-JO-Zvu"/>
+                                <exclude reference="W7a-Qi-gsS"/>
+                                <exclude reference="Yru-QD-N94"/>
+                                <exclude reference="8AS-LU-myT"/>
+                                <exclude reference="FfL-Fn-jbK"/>
+                                <exclude reference="zDX-8e-cTO"/>
                                 <exclude reference="RCU-F2-2ow"/>
                                 <exclude reference="cEC-kI-VRe"/>
                                 <exclude reference="og0-CG-lNf"/>
                                 <exclude reference="uHz-gn-Wuz"/>
-                                <exclude reference="Tv5-7w-sPt"/>
-                                <exclude reference="pL8-UY-hSb"/>
-                                <exclude reference="v3J-yi-1hT"/>
+                                <exclude reference="JO0-xs-zDF"/>
+                                <exclude reference="Md7-lv-EDj"/>
+                                <exclude reference="wuJ-ah-ULa"/>
+                                <exclude reference="clY-2l-tPd"/>
+                                <exclude reference="ey1-qx-f3x"/>
+                                <exclude reference="rBu-gc-CbV"/>
+                                <exclude reference="29F-z0-hRK"/>
+                                <exclude reference="haa-7g-CWd"/>
+                                <exclude reference="kPm-mx-2YP"/>
+                                <exclude reference="dTY-nV-vov"/>
+                                <exclude reference="mRL-Fm-cCo"/>
+                                <exclude reference="tx7-nm-LDZ"/>
+                                <exclude reference="4IR-gE-sIx"/>
+                                <exclude reference="I3S-qp-pZD"/>
+                                <exclude reference="UJ7-Bo-7tn"/>
                                 <exclude reference="CVB-NK-ILr"/>
                                 <exclude reference="Wgz-6K-Ytf"/>
                                 <exclude reference="a6T-1u-ht7"/>
@@ -391,34 +418,24 @@
                                 <exclude reference="7hU-Km-FK5"/>
                                 <exclude reference="DIB-NE-HMA"/>
                                 <exclude reference="w3c-6i-Ucg"/>
-                                <exclude reference="dTY-nV-vov"/>
-                                <exclude reference="mRL-Fm-cCo"/>
-                                <exclude reference="tx7-nm-LDZ"/>
-                                <exclude reference="JO0-xs-zDF"/>
-                                <exclude reference="Md7-lv-EDj"/>
-                                <exclude reference="wuJ-ah-ULa"/>
-                                <exclude reference="29F-z0-hRK"/>
-                                <exclude reference="haa-7g-CWd"/>
-                                <exclude reference="kPm-mx-2YP"/>
-                                <exclude reference="8AS-LU-myT"/>
-                                <exclude reference="FfL-Fn-jbK"/>
-                                <exclude reference="zDX-8e-cTO"/>
+                                <exclude reference="Tv5-7w-sPt"/>
+                                <exclude reference="pL8-UY-hSb"/>
+                                <exclude reference="v3J-yi-1hT"/>
+                                <exclude reference="MaL-jp-eyO"/>
+                                <exclude reference="dkW-5O-rEh"/>
+                                <exclude reference="gtD-gX-xf0"/>
                                 <exclude reference="60G-dM-vUt"/>
                                 <exclude reference="aaF-eZ-HYM"/>
                                 <exclude reference="nFe-kC-Imb"/>
                                 <exclude reference="MrQ-ae-SNG"/>
                                 <exclude reference="VlB-Kt-kH1"/>
                                 <exclude reference="v2z-4N-QaN"/>
-                                <exclude reference="396-yS-lpT"/>
-                                <exclude reference="xwr-lD-s5U"/>
-                                <exclude reference="4IR-gE-sIx"/>
-                                <exclude reference="I3S-qp-pZD"/>
-                                <exclude reference="UJ7-Bo-7tn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Zmn-Nh-fRp"/>
+                                <include reference="fJ7-qd-hLB"/>
                                 <include reference="nOr-Fd-O0J"/>
                                 <include reference="Vhy-PR-RL8"/>
                                 <include reference="w0y-Hj-W5U"/>
@@ -432,30 +449,40 @@
                                 <include reference="S50-fd-4Df"/>
                                 <include reference="Qj4-Qx-0ta"/>
                                 <include reference="lzQ-cN-rqn"/>
-                                <include reference="fJ7-qd-hLB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5Sx-j6-LDb"/>
-                                <include reference="AuL-JO-Zvu"/>
-                                <include reference="W7a-Qi-gsS"/>
-                                <include reference="Yru-QD-N94"/>
-                                <include reference="MaL-jp-eyO"/>
-                                <include reference="dkW-5O-rEh"/>
-                                <include reference="gtD-gX-xf0"/>
-                                <include reference="clY-2l-tPd"/>
-                                <include reference="ey1-qx-f3x"/>
-                                <include reference="rBu-gc-CbV"/>
+                                <include reference="396-yS-lpT"/>
+                                <include reference="xwr-lD-s5U"/>
                                 <include reference="KCe-aL-sDN"/>
                                 <include reference="foF-4a-mj9"/>
                                 <include reference="nKn-bM-or8"/>
                                 <include reference="rwP-cm-c5D"/>
+                                <include reference="5Sx-j6-LDb"/>
+                                <include reference="AuL-JO-Zvu"/>
+                                <include reference="W7a-Qi-gsS"/>
+                                <include reference="Yru-QD-N94"/>
+                                <include reference="8AS-LU-myT"/>
+                                <include reference="FfL-Fn-jbK"/>
+                                <include reference="zDX-8e-cTO"/>
                                 <include reference="RCU-F2-2ow"/>
                                 <include reference="cEC-kI-VRe"/>
                                 <include reference="og0-CG-lNf"/>
                                 <include reference="uHz-gn-Wuz"/>
-                                <include reference="Tv5-7w-sPt"/>
-                                <include reference="pL8-UY-hSb"/>
-                                <include reference="v3J-yi-1hT"/>
+                                <include reference="JO0-xs-zDF"/>
+                                <include reference="Md7-lv-EDj"/>
+                                <include reference="wuJ-ah-ULa"/>
+                                <include reference="clY-2l-tPd"/>
+                                <include reference="ey1-qx-f3x"/>
+                                <include reference="rBu-gc-CbV"/>
+                                <include reference="29F-z0-hRK"/>
+                                <include reference="haa-7g-CWd"/>
+                                <include reference="kPm-mx-2YP"/>
+                                <include reference="dTY-nV-vov"/>
+                                <include reference="mRL-Fm-cCo"/>
+                                <include reference="tx7-nm-LDZ"/>
+                                <include reference="4IR-gE-sIx"/>
+                                <include reference="I3S-qp-pZD"/>
+                                <include reference="UJ7-Bo-7tn"/>
                                 <include reference="CVB-NK-ILr"/>
                                 <include reference="Wgz-6K-Ytf"/>
                                 <include reference="a6T-1u-ht7"/>
@@ -463,29 +490,18 @@
                                 <include reference="7hU-Km-FK5"/>
                                 <include reference="DIB-NE-HMA"/>
                                 <include reference="w3c-6i-Ucg"/>
-                                <include reference="dTY-nV-vov"/>
-                                <include reference="mRL-Fm-cCo"/>
-                                <include reference="tx7-nm-LDZ"/>
-                                <include reference="JO0-xs-zDF"/>
-                                <include reference="Md7-lv-EDj"/>
-                                <include reference="wuJ-ah-ULa"/>
-                                <include reference="29F-z0-hRK"/>
-                                <include reference="haa-7g-CWd"/>
-                                <include reference="kPm-mx-2YP"/>
-                                <include reference="8AS-LU-myT"/>
-                                <include reference="FfL-Fn-jbK"/>
-                                <include reference="zDX-8e-cTO"/>
+                                <include reference="Tv5-7w-sPt"/>
+                                <include reference="pL8-UY-hSb"/>
+                                <include reference="v3J-yi-1hT"/>
+                                <include reference="MaL-jp-eyO"/>
+                                <include reference="dkW-5O-rEh"/>
+                                <include reference="gtD-gX-xf0"/>
                                 <include reference="60G-dM-vUt"/>
                                 <include reference="aaF-eZ-HYM"/>
                                 <include reference="nFe-kC-Imb"/>
                                 <include reference="MrQ-ae-SNG"/>
                                 <include reference="VlB-Kt-kH1"/>
                                 <include reference="v2z-4N-QaN"/>
-                                <include reference="396-yS-lpT"/>
-                                <include reference="xwr-lD-s5U"/>
-                                <include reference="4IR-gE-sIx"/>
-                                <include reference="I3S-qp-pZD"/>
-                                <include reference="UJ7-Bo-7tn"/>
                             </mask>
                         </variation>
                     </view>

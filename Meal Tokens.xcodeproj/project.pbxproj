@@ -21,7 +21,6 @@
 		C194167E1B41F53200389A6F /* coindropA.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194167D1B41F53200389A6F /* coindropA.wav */; };
 		C194E3EF1B424009009A7D28 /* nomnom.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194E3EE1B424009009A7D28 /* nomnom.wav */; };
 		C1C591341B2F908500EA0FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591331B2F908500EA0FD6 /* AppDelegate.swift */; };
-		C1C591361B2F908500EA0FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591351B2F908500EA0FD6 /* ViewController.swift */; };
 		C1C591391B2F908500EA0FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1C591371B2F908500EA0FD6 /* Main.storyboard */; };
 		C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C5913A1B2F908500EA0FD6 /* Images.xcassets */; };
 		C1C5913E1B2F908500EA0FD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C5913C1B2F908500EA0FD6 /* LaunchScreen.xib */; };
@@ -96,7 +95,6 @@
 		C1C5912E1B2F908500EA0FD6 /* Meal Tokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Tokens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C591321B2F908500EA0FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C591331B2F908500EA0FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1C591351B2F908500EA0FD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1C591381B2F908500EA0FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1C5913A1B2F908500EA0FD6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C1C5913D1B2F908500EA0FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		C11EB4281C77C7FF0052BCB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C1C591351B2F908500EA0FD6 /* ViewController.swift */,
 				C127DE751C7E349700D330FF /* SettingsViewController.swift */,
 				C127DE791C7E34B500D330FF /* TokensViewController.swift */,
 				C127DE7B1C7E34CD00D330FF /* StatsViewController.swift */,
@@ -386,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C127DE7A1C7E34B500D330FF /* TokensViewController.swift in Sources */,
-				C1C591361B2F908500EA0FD6 /* ViewController.swift in Sources */,
 				C1C591341B2F908500EA0FD6 /* AppDelegate.swift in Sources */,
 				C127DE7C1C7E34CD00D330FF /* StatsViewController.swift in Sources */,
 				C127DE761C7E349700D330FF /* SettingsViewController.swift in Sources */,

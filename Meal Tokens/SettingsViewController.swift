@@ -17,42 +17,38 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var dificultySettingLabel: UISegmentedControl!
 
     
-    @IBAction func dificultySettingButton(sender: UISegmentedControl) {
-        
+    @IBAction func dificultySettingButton(sender: UISegmentedControl)
+    {
         savingData()
-        
     }
-    
-    
-    
-    
+ 
     func savingData()
     {
-        loadingData()
+        if (dificultySettingLabel.selectedSegmentIndex == 0)
+        {
+            defaults.setValue("easy", forKey: "difficulty")
+        } else if (dificultySettingLabel.selectedSegmentIndex == 1)
+        {
+            defaults.setValue("hard", forKey: "difficulty")
+        }
     }
-    
-    func loadingData()
-    {
-        
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (defaults.objectForKey("dificulty") != nil)
+        if (defaults.objectForKey("difficulty") != nil)
         {
-            if(defaults.stringForKey("dificulty") == "easy")
+            if(defaults.stringForKey("difficulty") == "easy")
             {
                 dificultySettingLabel.selectedSegmentIndex = 0
             
-            } else if(defaults.stringForKey("dificulty") == "hard")
+            } else if(defaults.stringForKey("difficulty") == "hard")
             {
                 dificultySettingLabel.selectedSegmentIndex = 1
             }
-        } else if (defaults.objectForKey("dificulty") == nil)
+        } else
         {
-            defaults.setValue("easy", forKey: "dificulty")
+            defaults.setValue("easy", forKey: "difficulty")
         }
         
         savingData()

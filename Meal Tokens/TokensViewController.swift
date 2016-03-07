@@ -13,7 +13,7 @@ import Charts
 class TokensViewController: UIViewController {
     
     private var tokenCalculator: Double? = 0.0
-    private var tokenDificulty: Double? = 1.0
+    private var tokenDifficulty: Double? = 1.0
     let defaults = NSUserDefaults.standardUserDefaults()
 
     
@@ -22,7 +22,7 @@ class TokensViewController: UIViewController {
     @IBAction func cheatButtonPressed(sender: UIButton) {
         
         loadingData()
-        if self.tokenCalculator! - tokenDificulty! >= 0
+        if self.tokenCalculator! - tokenDifficulty! >= 0
         {
             let refreshAlert = UIAlertController(title: "Are You sure", message: "you want to use a token?", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -32,7 +32,7 @@ class TokensViewController: UIViewController {
             
             refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction) in
                 //println("Handle Ok logic here")
-                self.tokenCalculator = self.tokenCalculator! - self.tokenDificulty!
+                self.tokenCalculator = self.tokenCalculator! - self.tokenDifficulty!
                 self.savingData()
                 self.loadingData()
                 
@@ -123,19 +123,7 @@ class TokensViewController: UIViewController {
     /// Sets NSUserdefaults for tokens and dificulty
     func savingData()
     {
-        //these main two "if" statements may be eliminated
-        if (defaults.objectForKey("tokens") != nil) {
-            defaults.setValue(tokenCalculator, forKey: "tokens" )
-        }
-        if (defaults.objectForKey("dificulty") != nil) {
-            if (tokenDificulty! == 2.0)
-            {
-                defaults.setValue("Hard", forKey: "dificulty" )
-            } else
-            {
-                defaults.setValue("Easy", forKey: "dificulty" )
-            }
-        }
+        self.defaults.setValue(self.tokenCalculator!, forKey: "tokens")
         loadingData()
     }
     
@@ -143,43 +131,47 @@ class TokensViewController: UIViewController {
     func loadingData()
     {
         
-        if (defaults.stringForKey("dificulty") == "hard")
+        if (defaults.stringForKey("difficulty") == "hard")
         {
-            tokenDificulty = 2.0
+            tokenDifficulty = 2.0
         } else
         {
-            tokenDificulty = 1.0
+            tokenDifficulty = 1.0
         }
         tokenCalculator = defaults.doubleForKey("tokens")
-        cheatTokensNumber.text = String(Int(tokenCalculator! / tokenDificulty!))
+        cheatTokensNumber.text = String(Int(tokenCalculator! / tokenDifficulty!))
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        defaults.setValue("easy", forKey: "dificulty")
-        if (defaults.objectForKey("tokens") == nil || defaults.objectForKey("dificulty") == nil) {
+        if (defaults.objectForKey("tokens") == nil || defaults.objectForKey("difficulty") == nil) {
             defaults.setValue(0.0, forKey: "tokens")
-            defaults.setValue("easy", forKey: "dificulty")
+            defaults.setValue("easy", forKey: "difficulty")
         }
-        
-        savingData()
-//        if (defaults.objectForKey("dificulty") != nil) {
-//            if (defaults.stringForKey("dificulty") == "hard")
-//            {
-//                tokenDificulty = 2.0
-//            } else
-//            {
-//                tokenDificulty = 1.0
-//            }
-//        } else
-//        {
-//            defaults.setValue("easy", forKey: "dificulty")
-//        }
-        
+        loadingData()
+    }
+    override func viewDidAppear(animated: Bool) {
+        loadingData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,18 +9,20 @@
 import UIKit
 import AVFoundation
 import Charts
+import Foundation
 
 class TokensViewController: UIViewController {
     
     private var tokenCalculator: Double? = 0.0
     private var tokenDifficulty: Double? = 1.0
-    let defaults = NSUserDefaults.standardUserDefaults()
-
+    private let calendarBrain = CalendarBrain().getDate()
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    private let musicBrain = MusicBrain.init()
+
     @IBOutlet weak var cheatTokensNumber: UILabel!
     
     @IBAction func cheatButtonPressed(sender: UIButton) {
-        
         loadingData()
         if self.tokenCalculator! - tokenDifficulty! >= 0
         {
@@ -36,13 +38,7 @@ class TokensViewController: UIViewController {
                 self.savingData()
                 self.loadingData()
                 
-                // Load AudioServices
-                let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
-                var mySound: SystemSoundID = 0
-                AudioServicesCreateSystemSoundID(soundURL!, &mySound)
-                
-                // Play
-                AudioServicesPlaySystemSound(mySound);
+                self.musicBrain.playUseTokens()
             }))
             
             presentViewController(refreshAlert, animated: true, completion: nil)
@@ -50,8 +46,6 @@ class TokensViewController: UIViewController {
         {
             self.displaySadNoTokenMessage()
         }
-
-        
     }
     
     @IBAction func addTokensButtons(sender: UIButton) {
@@ -82,43 +76,37 @@ class TokensViewController: UIViewController {
     }
     
     func tokenAddBrain(selectedButton: Int)
+    {
+        ///TODO fix so the appropriate message displays for chores
+        let refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(selectedButton) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction) in
+            //println("Handle Cancel Logic here")
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction) in
+            //println("Handle Ok logic here")
+            switch selectedButton
             {
-                let refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(selectedButton) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
-        
-                refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction) in
-                    //println("Handle Cancel Logic here")
-                }))
-        
-                refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction) in
-                    //println("Handle Ok logic here")
-                    switch selectedButton
-                    {
-                    case 1:
-                        self.tokenCalculator = self.tokenCalculator! + 1
-                    case 2:
-                        self.tokenCalculator = self.tokenCalculator! + 2
-                    case 3:
-                        self.tokenCalculator = self.tokenCalculator! + 1
-                    case 4:
-                        self.tokenCalculator = self.tokenCalculator! + 2
-                    default:
-                        break
-                    }
-                    self.savingData()
-        
-                    // Load
-                    let soundURL = NSBundle.mainBundle().URLForResource("coindropA", withExtension: "wav")
-                    var mySound: SystemSoundID = 0
-                    AudioServicesCreateSystemSoundID(soundURL!, &mySound)
-        
-                    // Play
-                    AudioServicesPlaySystemSound(mySound);
-                }))
-                
-                savingData()
-                presentViewController(refreshAlert, animated: true, completion: nil)
-        
+            case 1:
+                self.tokenCalculator = self.tokenCalculator! + 1
+            case 2:
+                self.tokenCalculator = self.tokenCalculator! + 2
+            case 3:
+                self.tokenCalculator = self.tokenCalculator! + 1
+            case 4:
+                self.tokenCalculator = self.tokenCalculator! + 2
+            default:
+                break
             }
+            self.savingData()
+            
+            self.musicBrain.playAddTokens()
+            }))
+        
+        savingData()
+        presentViewController(refreshAlert, animated: true, completion: nil)
+    }
     
     /// Sets NSUserdefaults for tokens and dificulty
     func savingData()
@@ -149,6 +137,10 @@ class TokensViewController: UIViewController {
             defaults.setValue(0.0, forKey: "tokens")
             defaults.setValue("easy", forKey: "difficulty")
         }
+//        if (defaults.objectForKey("statsData") == nil)
+//        {
+//            defaults.setValue(, "statsData")
+//        }
         loadingData()
     }
     override func viewDidAppear(animated: Bool) {

@@ -8,25 +8,62 @@
 
 import Foundation
 
-struct CalendarBrain
+class CalendarBrain
 {
 
     let calendar: NSCalendar
-    let currentDate: NSDate
-    let components: NSDateComponents
+    var currentDate: NSDate
+    var components: NSDateComponents
     
     init()
     {
         calendar = NSCalendar.currentCalendar()
         currentDate = NSDate()
-        components = calendar.components([.Month, .Day], fromDate: currentDate)
+        components = calendar.components([.Month, .Day, .Year], fromDate: currentDate)
     }
     
-    ///Returns a String, date, which contains todays date in the format MM/DD/YYYY
-    func getDate()->String
+    internal func updateCurrentDate()
     {
-        let date: String = ("\(components.month)/\(components.day)/\(components.year)")
+        currentDate = NSDate()
+        components = calendar.components([.Month, .Day, .Year], fromDate: currentDate)
+    }
+    
+    ///Returns an Int, "date", which contains todays date in the format MMDDYYYY
+    func getCurrentDate()-> String
+    {
+        updateCurrentDate()
         
+        
+        
+        
+        let stringDate: String = ("\(components.month)/\(components.day)/\(components.year)")
+        let date = stringDate
         return date
     }
+    
+    //Takes an Int, "date", which should be a date in the form MM/DD/YYYY and returns true if it matches today's date
+    func compareDate(date: String)-> Bool
+    {
+        updateCurrentDate()
+        if (date == getCurrentDate())
+        {
+            return true
+        }
+        return false
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

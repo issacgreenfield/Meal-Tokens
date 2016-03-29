@@ -145,20 +145,40 @@
                                     <action selector="dismissAboutView:" destination="ZSb-Bz-hMK" eventType="touchUpInside" id="ezD-XH-SbB"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avL-2R-DAk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.89009666442871094" green="0.89009666442871094" blue="0.89009666442871094" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <string key="text">Need Help keeping track of how much you workout, in relation to how guilty you feel cheating on your diet?
+
+Simply set rules for your diet based on healthy choices on your own, or with a certified dietician. Then, in order to get cheats from your set diet, just workout! As you enter your workout times into this app, it will build up cheat tokens that allow you to splurge on things you normally don't eat.
+
+The more you workout the more cheats you get!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="avL-2R-DAk" firstAttribute="width" secondItem="Xh6-dV-lVc" secondAttribute="width" multiplier="0.85" id="7bQ-GH-jcq"/>
+                            <constraint firstItem="avL-2R-DAk" firstAttribute="centerY" secondItem="Xh6-dV-lVc" secondAttribute="centerY" id="9vD-pS-9tb"/>
                             <constraint firstItem="a3S-Tv-or9" firstAttribute="top" secondItem="0q6-7N-tFI" secondAttribute="bottom" constant="8" id="IcN-rQ-0oc">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstItem="0q6-7N-tFI" firstAttribute="width" secondItem="Xh6-dV-lVc" secondAttribute="width" multiplier="0.3" id="h4N-22-3Ru"/>
+                            <constraint firstItem="avL-2R-DAk" firstAttribute="centerX" secondItem="Xh6-dV-lVc" secondAttribute="centerX" id="sEg-GN-dJX"/>
                             <constraint firstItem="0q6-7N-tFI" firstAttribute="centerX" secondItem="Xh6-dV-lVc" secondAttribute="centerX" id="xu7-dl-e3d"/>
+                            <constraint firstItem="avL-2R-DAk" firstAttribute="height" secondItem="Xh6-dV-lVc" secondAttribute="height" multiplier="0.5" id="zyh-BO-67K"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="0q6-7N-tFI"/>
+                                <exclude reference="avL-2R-DAk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="7bQ-GH-jcq"/>
+                                <exclude reference="9vD-pS-9tb"/>
+                                <exclude reference="sEg-GN-dJX"/>
+                                <exclude reference="zyh-BO-67K"/>
                                 <exclude reference="h4N-22-3Ru"/>
                                 <exclude reference="xu7-dl-e3d"/>
                                 <exclude reference="IcN-rQ-0oc"/>
@@ -167,8 +187,13 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="0q6-7N-tFI"/>
+                                <include reference="avL-2R-DAk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="7bQ-GH-jcq"/>
+                                <include reference="9vD-pS-9tb"/>
+                                <include reference="sEg-GN-dJX"/>
+                                <include reference="zyh-BO-67K"/>
                                 <include reference="h4N-22-3Ru"/>
                                 <include reference="xu7-dl-e3d"/>
                                 <include reference="IcN-rQ-0oc"/>

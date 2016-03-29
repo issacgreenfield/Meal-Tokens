@@ -12,6 +12,7 @@ class CalendarBrain
 {
 
     let calendar: NSCalendar
+    let delimiter = "/"
     var currentDate: NSDate
     var components: NSDateComponents
     
@@ -19,35 +20,40 @@ class CalendarBrain
     {
         calendar = NSCalendar.currentCalendar()
         currentDate = NSDate()
-        components = calendar.components([.Month, .Day, .Year], fromDate: currentDate)
+        components = calendar.components([.Year, .Month, .Day], fromDate: currentDate)
     }
     
     internal func updateCurrentDate()
     {
         currentDate = NSDate()
-        components = calendar.components([.Month, .Day, .Year], fromDate: currentDate)
+        components = calendar.components([.Year, .Month, .Day], fromDate: currentDate)
     }
     
-    ///Returns an Int, "date", which contains todays date in the format MMDDYYYY
+    ///Returns a String, "date", which contains todays date in the format YYYY/MM/DD
     func getCurrentDate()-> String
     {
         updateCurrentDate()
-        
-        
-        
-        
-        let stringDate: String = ("\(components.month)/\(components.day)/\(components.year)")
-        let date = stringDate
-        return date
+        let stringDate: String = ("\(components.year)\(delimiter)\(components.month)\(delimiter)\(components.day)")
+        return stringDate
     }
     
-    //Takes an Int, "date", which should be a date in the form MM/DD/YYYY and returns true if it matches today's date
+    //Takes a String, "date", which should be a date in the form YYYY/MM/DD and returns true if it matches today's date
     func compareDate(date: String)-> Bool
     {
         updateCurrentDate()
-        if (date == getCurrentDate())
+        
+        let dateSeparated = date.componentsSeparatedByString(delimiter)
+        
+        //This may cause problems if reused elsewhere
+        if(components.year == Int(dateSeparated[0]))
         {
-            return true
+            if(components.month == Int(dateSeparated[0]))
+            {
+                if(components.day == Int(dateSeparated[0]))
+                {
+                    return true
+                }
+            }
         }
         return false
     }

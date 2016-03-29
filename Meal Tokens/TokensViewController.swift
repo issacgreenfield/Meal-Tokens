@@ -118,7 +118,7 @@ class TokensViewController: UIViewController {
         var statsData: [String] = defaults.stringArrayForKey("statsData")!
         var lastStatsEntry: String = statsData[statsData.count - 1]
         let componentsLastStatsEntry: [String] = lastStatsEntry.componentsSeparatedByString("/")
-        let lastStatsEntryDate = componentsLastStatsEntry[0]
+        let lastStatsEntryDate = (componentsLastStatsEntry[0] + componentsLastStatsEntry[1] + componentsLastStatsEntry[2])
         
         if (calendarBrain.compareDate(lastStatsEntryDate))
         {
@@ -180,6 +180,17 @@ class TokensViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    
+    func fakeStatsNumbers()
+    {
+        var statsData: [AnyObject] = defaults.arrayForKey("statsData")!
+        statsData.append(String(calendarBrain.getCurrentDate()))
+        defaults.setValue(statsData, forKey: "statsData")
+
+
     }
 }
 

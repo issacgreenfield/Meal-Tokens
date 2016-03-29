@@ -24,8 +24,6 @@ class StatsDataBrain
         
         
         
-        
-        
         self.tokensUsedToday = ""
         self.tokensEarnedToday = ""
         
@@ -34,8 +32,6 @@ class StatsDataBrain
     func parseDataPoints(dataPoints: [String], todaysDate: String)
     {
         let parsedDataPoints: [String] = (dataPoints[dataPoints.count - 1]).componentsSeparatedByString(delimiter)
-        
-        
         
         
     }

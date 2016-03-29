@@ -15,7 +15,6 @@ class SettingsViewController: UIViewController {
     
     let defaults = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var dificultySettingLabel: UISegmentedControl!
-
     
     @IBAction func dificultySettingButton(sender: UISegmentedControl)
     {

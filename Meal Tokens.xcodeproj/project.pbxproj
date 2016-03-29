@@ -28,6 +28,7 @@
 		C1C5913B1B2F908500EA0FD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C5913A1B2F908500EA0FD6 /* Images.xcassets */; };
 		C1C5913E1B2F908500EA0FD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1C5913C1B2F908500EA0FD6 /* LaunchScreen.xib */; };
 		C1C5914A1B2F908500EA0FD6 /* Meal_TokensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C591491B2F908500EA0FD6 /* Meal_TokensTests.swift */; };
+		C1F32A0B1CAAF3F500364851 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F32A0A1CAAF3F500364851 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		C1C591431B2F908500EA0FD6 /* Meal TokensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal TokensTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C591481B2F908500EA0FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C591491B2F908500EA0FD6 /* Meal_TokensTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_TokensTests.swift; sourceTree = "<group>"; };
+		C1F32A0A1CAAF3F500364851 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +152,10 @@
 		C11EB4281C77C7FF0052BCB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C127DE751C7E349700D330FF /* SettingsViewController.swift */,
 				C127DE791C7E34B500D330FF /* TokensViewController.swift */,
 				C127DE7B1C7E34CD00D330FF /* StatsViewController.swift */,
+				C127DE751C7E349700D330FF /* SettingsViewController.swift */,
+				C1F32A0A1CAAF3F500364851 /* AboutViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				C14163D61C91EB7000542E43 /* StatsDataBrain.swift in Sources */,
 				C1C591341B2F908500EA0FD6 /* AppDelegate.swift in Sources */,
 				C127DE7C1C7E34CD00D330FF /* StatsViewController.swift in Sources */,
+				C1F32A0B1CAAF3F500364851 /* AboutViewController.swift in Sources */,
 				C127DE761C7E349700D330FF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

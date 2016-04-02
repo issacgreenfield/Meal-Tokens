@@ -60,7 +60,7 @@ class StatsViewController: UIViewController {
     
     func loadingData()
     {
-        //        self.numberOfTokensLabel.text = String(self.tokenCalculator! % self.dificultyLevel)
+        
     }
     
     override func viewDidLoad() {
@@ -76,8 +76,8 @@ class StatsViewController: UIViewController {
         //chart setup
         statsChartView.noDataText = "You need to provide data for the chart."
         
-        date = ["1/13", "1/14", "1/15", "1/16", "1/17", "1/18"]
-        let tokensEarned = [1.0, 0.5, 2.0, 1.0, 3.0, 0.0]
+        date = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        let tokensEarned = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5]
         
         setChart(date, values: tokensEarned)
         

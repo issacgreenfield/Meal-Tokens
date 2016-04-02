@@ -37,6 +37,35 @@ class CalendarBrain
         return stringDate
     }
     
+    //returns an Int between 1-7, such that 1 = Sunday, 2 = Monday, and so on
+    func getDayOfWeek()-> Int{
+        let dayOfTheWeek = components.weekday
+        return dayOfTheWeek
+    }
+    
+    ///Returns a dictionary of the past week with the date corresponding to the days of the week
+//    func getCurrentWeek()-> [String]
+//    {
+//        updateCurrentDate()
+//        var thisWeekDictionary: [String:String] = [:]
+//        let dayOfTheWeek = components.weekday
+//        
+//        
+//        
+//        
+//        if (currentDayOfTheWeek != "Monday")
+//        {
+//            
+//        }
+//        
+//        
+//        
+//        thisWeekDictionary["\(components.month)\(delimiter)\(components.day)"] = "Monday"
+//        
+//        return thisWeekDictionary
+//
+//    }
+    
     //Takes a String, "date", which should be a date in the form YYYY/MM/DD and returns true if it matches today's date
     func compareDate(date: String)-> Bool
     {

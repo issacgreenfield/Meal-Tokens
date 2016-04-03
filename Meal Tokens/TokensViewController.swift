@@ -90,11 +90,11 @@ class TokensViewController: UIViewController {
             switch selectedButton
             {
             case 1:
-                addTokensAmount += 1.0
+                addTokensAmount += 0.5
             case 2:
-                addTokensAmount += 2.0
-            case 3:
                 addTokensAmount += 1.0
+            case 3:
+                addTokensAmount += 1.5
             case 4:
                 addTokensAmount += 2.0
             default:

@@ -28,8 +28,9 @@ class StatsViewController: UIViewController {
     var date: [String]!
     
     
-    func setChart(dataPoints: [String], values: [Double]) {
+    func setChart(values: [Double]) {
         statsChartView.noDataText = "You need to provide data for the chart."
+        date = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
         
         statsChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .EaseInBounce)
         
@@ -41,7 +42,7 @@ class StatsViewController: UIViewController {
         
         var dataEntries: [BarChartDataEntry] = []
         
-        for i in 0..<dataPoints.count {
+        for i in 0..<date.count {
             let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
             dataEntries.append(dataEntry)
         }
@@ -60,7 +61,7 @@ class StatsViewController: UIViewController {
     
     func loadingData()
     {
-        
+        ///TODO: populate with values from earned tokens
     }
     
     override func viewDidLoad() {
@@ -76,10 +77,9 @@ class StatsViewController: UIViewController {
         //chart setup
         statsChartView.noDataText = "You need to provide data for the chart."
         
-        date = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-        let tokensEarned = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5]
+        let tokensEarned = [1.0, 2.0, 1.5, 1.0, 2.0, 1.0, 0.5]
         
-        setChart(date, values: tokensEarned)
+        setChart(tokensEarned)
         
     }
     

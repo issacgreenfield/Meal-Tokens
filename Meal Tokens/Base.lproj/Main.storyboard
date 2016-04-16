@@ -77,16 +77,16 @@
                                 <exclude reference="0ia-z4-BSS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9Cg-EJ-2xw"/>
-                                <exclude reference="Rik-98-3yw"/>
-                                <exclude reference="TcP-PA-m8p"/>
+                                <exclude reference="6Hi-pk-bIv"/>
+                                <exclude reference="c6L-wr-mSA"/>
+                                <exclude reference="iSj-wP-AJP"/>
                                 <exclude reference="aNL-R7-1D0"/>
                                 <exclude reference="lko-iR-rjx"/>
                                 <exclude reference="uek-iK-mBK"/>
                                 <exclude reference="vgH-gJ-0u4"/>
-                                <exclude reference="c6L-wr-mSA"/>
-                                <exclude reference="iSj-wP-AJP"/>
-                                <exclude reference="6Hi-pk-bIv"/>
+                                <exclude reference="9Cg-EJ-2xw"/>
+                                <exclude reference="Rik-98-3yw"/>
+                                <exclude reference="TcP-PA-m8p"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -96,16 +96,16 @@
                                 <include reference="0ia-z4-BSS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9Cg-EJ-2xw"/>
-                                <include reference="Rik-98-3yw"/>
-                                <include reference="TcP-PA-m8p"/>
+                                <include reference="6Hi-pk-bIv"/>
+                                <include reference="c6L-wr-mSA"/>
+                                <include reference="iSj-wP-AJP"/>
                                 <include reference="aNL-R7-1D0"/>
                                 <include reference="lko-iR-rjx"/>
                                 <include reference="uek-iK-mBK"/>
                                 <include reference="vgH-gJ-0u4"/>
-                                <include reference="c6L-wr-mSA"/>
-                                <include reference="iSj-wP-AJP"/>
-                                <include reference="6Hi-pk-bIv"/>
+                                <include reference="9Cg-EJ-2xw"/>
+                                <include reference="Rik-98-3yw"/>
+                                <include reference="TcP-PA-m8p"/>
                             </mask>
                         </variation>
                     </view>
@@ -127,6 +127,7 @@
                         <viewControllerLayoutGuide type="bottom" id="a3S-Tv-or9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xh6-dV-lVc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-7N-tFI">
@@ -175,13 +176,13 @@ The more you workout the more cheats you get!</string>
                                 <exclude reference="avL-2R-DAk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IcN-rQ-0oc"/>
+                                <exclude reference="h4N-22-3Ru"/>
+                                <exclude reference="xu7-dl-e3d"/>
                                 <exclude reference="7bQ-GH-jcq"/>
                                 <exclude reference="9vD-pS-9tb"/>
                                 <exclude reference="sEg-GN-dJX"/>
                                 <exclude reference="zyh-BO-67K"/>
-                                <exclude reference="h4N-22-3Ru"/>
-                                <exclude reference="xu7-dl-e3d"/>
-                                <exclude reference="IcN-rQ-0oc"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -190,13 +191,13 @@ The more you workout the more cheats you get!</string>
                                 <include reference="avL-2R-DAk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IcN-rQ-0oc"/>
+                                <include reference="h4N-22-3Ru"/>
+                                <include reference="xu7-dl-e3d"/>
                                 <include reference="7bQ-GH-jcq"/>
                                 <include reference="9vD-pS-9tb"/>
                                 <include reference="sEg-GN-dJX"/>
                                 <include reference="zyh-BO-67K"/>
-                                <include reference="h4N-22-3Ru"/>
-                                <include reference="xu7-dl-e3d"/>
-                                <include reference="IcN-rQ-0oc"/>
                             </mask>
                         </variation>
                     </view>
@@ -298,7 +299,7 @@ The more you workout the more cheats you get!</string>
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="1">
+                                <state key="normal" title="15">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -319,7 +320,7 @@ The more you workout the more cheats you get!</string>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOr-Fd-O0J" userLabel="2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="2">
+                                <state key="normal" title="30">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -338,7 +339,7 @@ The more you workout the more cheats you get!</string>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0y-Hj-W5U" userLabel="3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="3">
+                                <state key="normal" title="45">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -355,14 +356,11 @@ The more you workout the more cheats you get!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="52" y="458" width="37" height="36"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDj-PL-UN2" userLabel="4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="4">
+                                <state key="normal" title="60">
                                     <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>

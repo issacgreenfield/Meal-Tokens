@@ -15,7 +15,7 @@ class TokensViewController: UIViewController {
     
     private var tokenCalculator: Double? = 0.0
     private var tokenDifficulty: Double? = 1.0
-    private var calendarBrain = CalendarBrain()
+    private var calendarBrain = CalendarBrain(delimiter: "/")
     
     let defaults = NSUserDefaults.standardUserDefaults()
     private let musicBrain = MusicBrain.init()
@@ -52,18 +52,21 @@ class TokensViewController: UIViewController {
         var selectedButton = 0
         switch Int((sender.titleLabel?.text)!)!
         {
-        case 1:
-            selectedButton = 1
-        case 2:
-            selectedButton = 2
-        case 3:
-            selectedButton = 3
-        case 4:
-            selectedButton = 4
+        case 15:
+            selectedButton = 15
+            tokenAddBrain(selectedButton)
+        case 30:
+            selectedButton = 30
+            tokenAddBrain(selectedButton)
+        case 45:
+            selectedButton = 45
+            tokenAddBrain(selectedButton)
+        case 60:
+            selectedButton = 60
+            tokenAddBrain(selectedButton)
         default:
             break
         }
-        tokenAddBrain(selectedButton)
     }
 
     
@@ -89,19 +92,19 @@ class TokensViewController: UIViewController {
             var addTokensAmount: Double = 0.0
             switch selectedButton
             {
-            case 1:
+            case 15:
                 addTokensAmount += 0.5
-            case 2:
+            case 30:
                 addTokensAmount += 1.0
-            case 3:
+            case 45:
                 addTokensAmount += 1.5
-            case 4:
+            case 60:
                 addTokensAmount += 2.0
             default:
                 break
             }
             self.tokenCalculator = self.tokenCalculator! + addTokensAmount
-            self.saveTokenData(Int(addTokensAmount))
+            self.saveTokenData(addTokensAmount)
             self.savingData()
             
             self.musicBrain.playAddTokens()
@@ -111,25 +114,15 @@ class TokensViewController: UIViewController {
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
-    func saveTokenData(addTokensAmount: Int)
+    func saveTokenData(addTokensAmount: Double)
     {
         calendarBrain.updateCurrentDate()
-        
-        var statsData: [String] = defaults.stringArrayForKey("statsData")!
-        var lastStatsEntry: String = statsData[statsData.count - 1]
-        let componentsLastStatsEntry: [String] = lastStatsEntry.componentsSeparatedByString("/")
-        let lastStatsEntryDate = (componentsLastStatsEntry[0] + componentsLastStatsEntry[1] + componentsLastStatsEntry[2])
-        
-        if (calendarBrain.compareDate(lastStatsEntryDate))
-        {
-            lastStatsEntry = "\(lastStatsEntry)/\(calendarBrain.getCurrentDate()))"
-            statsData[statsData.count - 1] = lastStatsEntry
-            
-        } else
-        {
-            statsData.append("\(calendarBrain.getCurrentDate())/\(addTokensAmount)")
+        var statsData = defaults.dictionaryForKey("statsData")!
+        if let todaysTokenCount = statsData[calendarBrain.getCurrentDate()]?.doubleValue{
+            statsData[calendarBrain.getCurrentDate()] = todaysTokenCount + addTokensAmount
+        } else{
+            statsData[calendarBrain.getCurrentDate()] = addTokensAmount
         }
-        defaults.setObject(statsData, forKey: "statsData")
     }
     
     /// Sets NSUserdefaults for tokens and statsData
@@ -157,20 +150,21 @@ class TokensViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ///TODO: remove next line!!! temp testing only!!
+//        clearStatsData()
+        
         if (defaults.objectForKey("tokens") == nil || defaults.objectForKey("difficulty") == nil) {
             defaults.setValue(0.0, forKey: "tokens")
             defaults.setValue("easy", forKey: "difficulty")
         }
         if (defaults.objectForKey("statsData") == nil)
         {
-            var statsData: [NSString] = [NSString]()
-                statsData.append(NSString(string: String(calendarBrain.getCurrentDate())))
+            let statsData: [String: Double] = [calendarBrain.getCurrentDate(): 0.0]
             defaults.setValue(statsData, forKey: "statsData")
-        } else
-        {
-            var statsData: [AnyObject] = defaults.arrayForKey("statsData")!
-            statsData.append(String(calendarBrain.getCurrentDate()))
-            defaults.setValue(statsData, forKey: "statsData")
+//            var statsData: [String: Double] = defaults.dictionaryForKey("statsData")!
+//            statsData[String(calendarBrain.getCurrentDate())] = 0.0
+//            defaults.setValue(statsData, forKey: "statsData")
         }
         loadingData()
     }
@@ -178,19 +172,15 @@ class TokensViewController: UIViewController {
         loadingData()
     }
     
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
     }
     
-    
-    
-    func fakeStatsNumbers()
+    //Functions for testing uses only
+    internal func clearStatsData()
     {
-        var statsData: [AnyObject] = defaults.arrayForKey("statsData")!
-        statsData.append(String(calendarBrain.getCurrentDate()))
-        defaults.setValue(statsData, forKey: "statsData")
-
-
+        defaults.removeObjectForKey("statsData")
     }
 }
 

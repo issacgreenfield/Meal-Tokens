@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -222,24 +221,13 @@ The more you workout the more cheats you get!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHG-H5-fmB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Dismiss">
-                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismissChartPage:" destination="hk6-s6-IMq" eventType="touchUpInside" id="OOr-JC-wyD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mGe-55-8WE" firstAttribute="centerY" secondItem="e65-Fi-ZJ8" secondAttribute="centerY" id="51v-bk-5U4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aHG-H5-fmB" secondAttribute="trailing" id="RcI-LW-GpN"/>
                             <constraint firstItem="mGe-55-8WE" firstAttribute="leading" secondItem="e65-Fi-ZJ8" secondAttribute="leadingMargin" constant="60" id="SL1-JE-euW">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="aHG-H5-fmB" firstAttribute="top" secondItem="6xk-z7-DVb" secondAttribute="bottom" id="dOr-of-OW0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mGe-55-8WE" secondAttribute="trailing" constant="60" id="q4c-xI-Nr3">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -248,11 +236,8 @@ The more you workout the more cheats you get!</string>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="mGe-55-8WE"/>
-                                <exclude reference="aHG-H5-fmB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="RcI-LW-GpN"/>
-                                <exclude reference="dOr-of-OW0"/>
                                 <exclude reference="51v-bk-5U4"/>
                                 <exclude reference="SL1-JE-euW"/>
                                 <exclude reference="q4c-xI-Nr3"/>
@@ -262,11 +247,8 @@ The more you workout the more cheats you get!</string>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="mGe-55-8WE"/>
-                                <include reference="aHG-H5-fmB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="RcI-LW-GpN"/>
-                                <include reference="dOr-of-OW0"/>
                                 <include reference="51v-bk-5U4"/>
                                 <include reference="SL1-JE-euW"/>
                                 <include reference="q4c-xI-Nr3"/>

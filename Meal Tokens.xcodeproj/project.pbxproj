@@ -18,7 +18,6 @@
 		C127DE8B1C84D2E700D330FF /* 026-diamonds.png in Resources */ = {isa = PBXBuildFile; fileRef = C127DE881C84D2E700D330FF /* 026-diamonds.png */; };
 		C14163D01C8E3E1100542E43 /* CalendarBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14163CF1C8E3E1100542E43 /* CalendarBrain.swift */; };
 		C14163D21C90A3F000542E43 /* MusicBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14163D11C90A3F000542E43 /* MusicBrain.swift */; };
-		C14163D61C91EB7000542E43 /* StatsDataBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14163D51C91EB7000542E43 /* StatsDataBrain.swift */; };
 		C14303091B4742D800C71707 /* workoutBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C14303081B4742D800C71707 /* workoutBackground.png */; };
 		C143030B1B47432A00C71707 /* WorkoutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C143030A1B47432A00C71707 /* WorkoutIcon.png */; };
 		C194167E1B41F53200389A6F /* coindropA.wav in Resources */ = {isa = PBXBuildFile; fileRef = C194167D1B41F53200389A6F /* coindropA.wav */; };
@@ -94,7 +93,6 @@
 		C127DE881C84D2E700D330FF /* 026-diamonds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "026-diamonds.png"; sourceTree = "<group>"; };
 		C14163CF1C8E3E1100542E43 /* CalendarBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarBrain.swift; sourceTree = "<group>"; };
 		C14163D11C90A3F000542E43 /* MusicBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicBrain.swift; sourceTree = "<group>"; };
-		C14163D51C91EB7000542E43 /* StatsDataBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsDataBrain.swift; sourceTree = "<group>"; };
 		C14303081B4742D800C71707 /* workoutBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workoutBackground.png; sourceTree = "<group>"; };
 		C143030A1B47432A00C71707 /* WorkoutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WorkoutIcon.png; sourceTree = "<group>"; };
 		C194167D1B41F53200389A6F /* coindropA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coindropA.wav; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			children = (
 				C14163D11C90A3F000542E43 /* MusicBrain.swift */,
 				C14163CF1C8E3E1100542E43 /* CalendarBrain.swift */,
-				C14163D51C91EB7000542E43 /* StatsDataBrain.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -397,7 +394,6 @@
 				C14163D21C90A3F000542E43 /* MusicBrain.swift in Sources */,
 				C127DE7A1C7E34B500D330FF /* TokensViewController.swift in Sources */,
 				C14163D01C8E3E1100542E43 /* CalendarBrain.swift in Sources */,
-				C14163D61C91EB7000542E43 /* StatsDataBrain.swift in Sources */,
 				C1C591341B2F908500EA0FD6 /* AppDelegate.swift in Sources */,
 				C127DE7C1C7E34CD00D330FF /* StatsViewController.swift in Sources */,
 				C1F32A0B1CAAF3F500364851 /* AboutViewController.swift in Sources */,

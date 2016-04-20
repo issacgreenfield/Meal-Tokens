@@ -11,18 +11,19 @@ import AVFoundation
 import Charts
 import Foundation
 
-class TokensViewController: UIViewController {
-    
+class TokensViewController: UIViewController
+{
     private var tokenCalculator: Double? = 0.0
     private var tokenDifficulty: Double? = 1.0
     private var calendarBrain = CalendarBrain(delimiter: "/")
     
-    let defaults = NSUserDefaults.standardUserDefaults()
+    private let defaults = NSUserDefaults.standardUserDefaults()
     private let musicBrain = MusicBrain.init()
-
+    
     @IBOutlet weak var cheatTokensNumber: UILabel!
     
-    @IBAction func cheatButtonPressed(sender: UIButton) {
+    @IBAction func cheatButtonPressed(sender: UIButton)
+    {
         loadingData()
         if self.tokenCalculator! - tokenDifficulty! >= 0
         {
@@ -38,10 +39,8 @@ class TokensViewController: UIViewController {
                 self.saveTokenData(Double(-1 * self.tokenDifficulty!))
                 self.savingData()
                 self.loadingData()
-                
                 self.musicBrain.playUseTokens()
             }))
-            
             presentViewController(refreshAlert, animated: true, completion: nil)
         }else
         {
@@ -49,7 +48,8 @@ class TokensViewController: UIViewController {
         }
     }
     
-    @IBAction func addTokensButtons(sender: UIButton) {
+    @IBAction func addTokensButtons(sender: UIButton)
+    {
         var selectedButton = 0
         switch Int((sender.titleLabel?.text)!)!
         {
@@ -69,7 +69,6 @@ class TokensViewController: UIViewController {
             break
         }
     }
-
     
     func displaySadNoTokenMessage()
     {
@@ -87,9 +86,7 @@ class TokensViewController: UIViewController {
         refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction) in
             //println("Handle Cancel Logic here")
         }))
-        
         refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction) in
-            //println("Handle Ok logic here")
             var addTokensAmount: Double = 0.0
             switch selectedButton
             {
@@ -107,10 +104,8 @@ class TokensViewController: UIViewController {
             self.tokenCalculator = self.tokenCalculator! + addTokensAmount
             self.saveTokenData(addTokensAmount)
             self.savingData()
-            
             self.musicBrain.playAddTokens()
-            }))
-        
+        }))
         savingData()
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
@@ -132,13 +127,11 @@ class TokensViewController: UIViewController {
     {
         self.defaults.setValue(self.tokenCalculator!, forKey: "tokens")
         loadingData()
-        
     }
     
     /// Updates the View, as well as its local variables
     func loadingData()
     {
-        
         if (defaults.stringForKey("difficulty") == "hard")
         {
             tokenDifficulty = 2.0
@@ -150,13 +143,12 @@ class TokensViewController: UIViewController {
         cheatTokensNumber.text = String(Int(tokenCalculator! / tokenDifficulty!))
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-        ///TODO: remove next line!!! temp testing only!!
-//        clearStatsData()
-        
-        if (defaults.objectForKey("tokens") == nil || defaults.objectForKey("difficulty") == nil) {
+        if (defaults.objectForKey("tokens") == nil || defaults.objectForKey("difficulty") == nil)
+        {
             defaults.setValue(0.0, forKey: "tokens")
             defaults.setValue("easy", forKey: "difficulty")
         }
@@ -167,19 +159,14 @@ class TokensViewController: UIViewController {
         }
         loadingData()
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool)
+    {
         loadingData()
     }
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-    }
-    
-    //Functions for testing uses only
-    internal func clearStatsData()
-    {
-        defaults.removeObjectForKey("statsData")
     }
 }
 

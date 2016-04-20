@@ -62,6 +62,7 @@ class StatsViewController: UIViewController {
         statsChartView.xAxis.labelPosition = .Bottom
         
         
+        
         //Fetch data from NSDefaults and cross-check with this weeks dates in CalendarBrain
         calendarBrain.getCurrentWeek()
         var statsData = defaults.dictionaryForKey("statsData")!
@@ -138,6 +139,9 @@ class StatsViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Net Tokens Earned")
         let chartData = BarChartData(xVals: date, dataSet: chartDataSet)
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .DecimalStyle
+        chartData.setValueFormatter(formatter)
         statsChartView.data = chartData
     }
     

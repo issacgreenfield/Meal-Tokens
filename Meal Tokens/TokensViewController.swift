@@ -35,6 +35,7 @@ class TokensViewController: UIViewController {
             refreshAlert.addAction(UIAlertAction(title: "Yum!", style: .Default, handler: { (action: UIAlertAction) in
                 //println("Handle Ok logic here")
                 self.tokenCalculator = self.tokenCalculator! - self.tokenDifficulty!
+                self.saveTokenData(Double(-1 * self.tokenDifficulty!))
                 self.savingData()
                 self.loadingData()
                 
@@ -123,14 +124,15 @@ class TokensViewController: UIViewController {
         } else{
             statsData[calendarBrain.getCurrentDate()] = addTokensAmount
         }
+        defaults.setValue(statsData, forKey: "statsData")
     }
     
     /// Sets NSUserdefaults for tokens and statsData
     func savingData()
     {
-        
         self.defaults.setValue(self.tokenCalculator!, forKey: "tokens")
         loadingData()
+        
     }
     
     /// Updates the View, as well as its local variables
@@ -162,9 +164,6 @@ class TokensViewController: UIViewController {
         {
             let statsData: [String: Double] = [calendarBrain.getCurrentDate(): 0.0]
             defaults.setValue(statsData, forKey: "statsData")
-//            var statsData: [String: Double] = defaults.dictionaryForKey("statsData")!
-//            statsData[String(calendarBrain.getCurrentDate())] = 0.0
-//            defaults.setValue(statsData, forKey: "statsData")
         }
         loadingData()
     }

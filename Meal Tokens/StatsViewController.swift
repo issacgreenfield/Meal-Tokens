@@ -15,14 +15,15 @@ class StatsViewController: UIViewController {
     
 //    let dificultyLevel = 2
     private var tokenCalculator: Double? = 0.0
-    
-    
+    private var tokenDifficulty: Double? = 1.0
     
     let defaults = NSUserDefaults.standardUserDefaults()
     
     @IBAction func dismissChartPage(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
     
     @IBAction func CheatTokensButton(sender: UIButton) {
         
@@ -33,8 +34,21 @@ class StatsViewController: UIViewController {
     
     
     func setChart() {
+        
+        
         let calendarBrain = CalendarBrain(delimiter: "/")
         var tokensEarned = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        
+        
+        if (defaults.stringForKey("difficulty") == "hard")
+        {
+            tokenDifficulty = 2.0
+        } else
+        {
+            tokenDifficulty = 1.0
+        }
+
+        
         
         statsChartView.noDataText = "You need to provide data for the chart."
         date = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
@@ -48,126 +62,69 @@ class StatsViewController: UIViewController {
         statsChartView.xAxis.labelPosition = .Bottom
         
         
-        //Must fetch data from NSDefaults and cross-check with this weeks dates in CalendarBrain
+        //Fetch data from NSDefaults and cross-check with this weeks dates in CalendarBrain
         calendarBrain.getCurrentWeek()
-        
         var statsData = defaults.dictionaryForKey("statsData")!
-        
-        
-//        var lastStatsEntry: String = statsData[statsData.count - 1]
-//        let componentsLastStatsEntry: [String] = lastStatsEntry.componentsSeparatedByString("/")
-
-//        if (calendarBrain.compareDates(calendarBrain.getCurrentDate(), statsData))
-//        {
-//            lastStatsEntry = "\(lastStatsEntry)/\(calendarBrain.getCurrentDate()))"
-//            statsData[statsData.count - 1] = lastStatsEntry
-//            
-//        } else
-//        {
-////            statsData.append("\(calendarBrain.getCurrentDate())/\(addTokensAmount)")
-//        }
-//        
-        
-
-        
-//        var statsData = defaults.dictionaryForKey("statsData")!
-        
-//        var setDataInWeekday: Double
         var dateOfTheWeek: String
+        
         //Set sunday "1"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[1]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[1]!)
         if let setSundayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[0] = setSundayData
+            tokensEarned[0] = setSundayData / tokenDifficulty!
         }else{
-            tokensEarned[0] = 5.0
+            tokensEarned[0] = 0.0
         }
-    
         //Set monday "2"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[2]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[2]!)
         if let setMondayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[1] = setMondayData
+            tokensEarned[1] = setMondayData / tokenDifficulty!
         }else{
-            tokensEarned[1] = 5.0
+            tokensEarned[1] = 0.0
         }
-
         //Set tuesday "3"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[3]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[3]!)
         if let setTuesdayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[2] = setTuesdayData
+            tokensEarned[2] = setTuesdayData / tokenDifficulty!
         }else{
-            tokensEarned[2] = 5.0
+            tokensEarned[2] = 0.0
         }
-
         //Set wednesday "4"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[4]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[4]!)
         if let setWednesdayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[3] = setWednesdayData
+            tokensEarned[3] = setWednesdayData / tokenDifficulty!
         }else{
-            tokensEarned[3] = 5.0
+            tokensEarned[3] = 0.0
         }
-
         //Set wednesday "5"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[5]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[5]!)
         if let setThursdayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[4] = setThursdayData
+            tokensEarned[4] = setThursdayData / tokenDifficulty!
         }else{
-            tokensEarned[4] = 5.0
+            tokensEarned[4] = 0.0
         }
 
         //Set friday "6"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[6]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[6]!)
         if let setFridayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[5] = setFridayData
+            tokensEarned[5] = setFridayData / tokenDifficulty!
         }else{
-            tokensEarned[5] = 5.0
+            tokensEarned[5] = 0.0
         }
 
         //Set saturday "7"
-        dateOfTheWeek = String(calendarBrain.getCurrentWeek()[7]!)
+        dateOfTheWeek = calendarBrain.getCurrentDateToString(calendarBrain.getCurrentWeek()[7]!)
         if let setSaturdayData = (statsData[dateOfTheWeek]) as? Double
         {
-            tokensEarned[6] = setSaturdayData
+            tokensEarned[6] = setSaturdayData / tokenDifficulty!
         }else{
-            tokensEarned[6] = 5.0
+            tokensEarned[6] = 0.0
         }
-
-    
-        
-        
-        
-        
-        
-        
-        
-//        var i = 0
-//        var dayOfTheWeek = calendarBrain.getDayOfWeek()
-//        while i < 7 {
-//            
-//            if dayOfTheWeek <= 0
-//            {
-//                break
-//            }else
-//            {
-//                
-//                
-//                
-//                if ((statsData[calendarBrain.getCurrentWeek()[dayOfTheWeek]!]) != nil)
-//                {
-//                    tokensEarned[7 - i] = stats
-//                }
-//                
-//                
-//                tokensEarned
-//            }
-//        }
-
-    
         
         
         //This section distributes the data points as they allign to the current week
@@ -179,23 +136,14 @@ class StatsViewController: UIViewController {
        }
     
         
-        
-        
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Tokens Earned")
+        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Net Tokens Earned")
         let chartData = BarChartData(xVals: date, dataSet: chartDataSet)
         statsChartView.data = chartData
     }
     
     func savingData()
     {
-//        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setDouble(tokenCalculator!, forKey: "tokens")
-        loadingData()
-    }
-    
-    func loadingData()
-    {
-        ///TODO: populate with values from earned tokens
+        
     }
     
     override func viewDidLoad() {
@@ -204,15 +152,12 @@ class StatsViewController: UIViewController {
         if (defaults.objectForKey("tokens") != nil) {
             tokenCalculator = defaults.doubleForKey("tokens")
         }
+        
         savingData()
         
         
         //chart setup
         statsChartView.noDataText = "You need to provide data for the chart."
-        
-//        var tokensEarned = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        
-        
         
         setChart()
         
@@ -220,6 +165,10 @@ class StatsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        setChart()
     }
     
 }

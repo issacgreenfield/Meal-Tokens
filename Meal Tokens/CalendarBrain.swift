@@ -30,6 +30,14 @@ class CalendarBrain
         components = calendar.components([.Year, .Month, .Day, .WeekdayOrdinal], fromDate: currentDate)
     }
     
+    ///Takes an NSDate and returns a String in the format YYYY/MM/DD
+    func getCurrentDateToString(nsDate: NSDate)-> String
+    {
+        components = calendar.components([.Year, .Month, .Day, .WeekdayOrdinal], fromDate: nsDate)
+        let stringDate: String = ("\(components.year)\(delimiter)\(components.month)\(delimiter)\(components.day)")
+        return stringDate
+    }
+    
     ///Returns a String, "date", which contains todays date in the format YYYY/MM/DD
     func getCurrentDate()-> String
     {

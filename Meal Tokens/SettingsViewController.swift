@@ -11,7 +11,8 @@ import AVFoundation
 import Charts
 
 class SettingsViewController: UIViewController {
-    let defaults = NSUserDefaults.standardUserDefaults()
+    private let defaults = NSUserDefaults.standardUserDefaults()
+    
     @IBOutlet weak var dificultySettingLabel: UISegmentedControl!
     
     @IBAction func dificultySettingButton(sender: UISegmentedControl)
@@ -19,7 +20,7 @@ class SettingsViewController: UIViewController {
         savingData()
     }
     
-    func savingData()
+    private func savingData()
     {
         if (dificultySettingLabel.selectedSegmentIndex == 0)
         {
@@ -39,7 +40,6 @@ class SettingsViewController: UIViewController {
             if(defaults.stringForKey("difficulty") == "easy")
             {
                 dificultySettingLabel.selectedSegmentIndex = 0
-                
             } else if(defaults.stringForKey("difficulty") == "hard")
             {
                 dificultySettingLabel.selectedSegmentIndex = 1

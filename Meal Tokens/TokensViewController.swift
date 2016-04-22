@@ -16,7 +16,6 @@ class TokensViewController: UIViewController
     private var tokenCalculator: Double? = 0.0
     private var tokenDifficulty: Double? = 1.0
     private var calendarBrain = CalendarBrain(delimiter: "/")
-    
     private let defaults = NSUserDefaults.standardUserDefaults()
     private let musicBrain = MusicBrain.init()
     
@@ -70,7 +69,7 @@ class TokensViewController: UIViewController
         }
     }
     
-    func displaySadNoTokenMessage()
+    private func displaySadNoTokenMessage()
     {
         let alertController = UIAlertController(title: "Oh No!!!", message:
             "You haven't worked out enough!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -78,13 +77,11 @@ class TokensViewController: UIViewController
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func tokenAddBrain(selectedButton: Int)
+    private func tokenAddBrain(selectedButton: Int)
     {
-        ///TODO fix so the appropriate message displays for chores
         let refreshAlert = UIAlertController(title: "Hold up", message: "Did you really work out for \(selectedButton) minutes?", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Blech... no", style: .Default, handler: { (action: UIAlertAction) in
-            //println("Handle Cancel Logic here")
         }))
         refreshAlert.addAction(UIAlertAction(title: "I did!", style: .Default, handler: { (action: UIAlertAction) in
             var addTokensAmount: Double = 0.0
@@ -110,9 +107,8 @@ class TokensViewController: UIViewController
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
-    func saveTokenData(addTokensAmount: Double)
+    private func saveTokenData(addTokensAmount: Double)
     {
-        calendarBrain.updateCurrentDate()
         var statsData = defaults.dictionaryForKey("statsData")!
         if let todaysTokenCount = statsData[calendarBrain.getCurrentDate()]?.doubleValue{
             statsData[calendarBrain.getCurrentDate()] = todaysTokenCount + addTokensAmount
@@ -122,15 +118,13 @@ class TokensViewController: UIViewController
         defaults.setValue(statsData, forKey: "statsData")
     }
     
-    /// Sets NSUserdefaults for tokens and statsData
-    func savingData()
+    private func savingData()
     {
         self.defaults.setValue(self.tokenCalculator!, forKey: "tokens")
         loadingData()
     }
     
-    /// Updates the View, as well as its local variables
-    func loadingData()
+    private func loadingData()
     {
         if (defaults.stringForKey("difficulty") == "hard")
         {

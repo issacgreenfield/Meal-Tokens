@@ -8,7 +8,6 @@
 
 import Foundation
 
-///Manages the current date, date compare, and what the date is for each day of the current week 
 class CalendarBrain
 {
     private let calendar: NSCalendar
@@ -21,39 +20,43 @@ class CalendarBrain
         self.delimiter = delimiter
         calendar = NSCalendar.currentCalendar()
         currentDate = NSDate()
-        components = calendar.components([.Year, .Month, .Day, .WeekdayOrdinal], fromDate: currentDate)
+        components = calendar.components([.Year, .Month, .Day, .Weekday], fromDate: currentDate)
     }
     
-    internal func updateCurrentDate()
+    ///Updates the NSDate: currentDate, variable 
+    private func updateCurrentDate()
     {
         currentDate = NSDate()
-        components = calendar.components([.Year, .Month, .Day, .WeekdayOrdinal], fromDate: currentDate)
+        components = calendar.components([.Year, .Month, .Day, .Weekday], fromDate: currentDate)
     }
     
     ///Takes an NSDate and returns a String in the format YYYY/MM/DD
-    func getCurrentDateToString(nsDate: NSDate)-> String
+    internal func getCurrentDateToString(nsDate: NSDate)-> String
     {
-        components = calendar.components([.Year, .Month, .Day, .WeekdayOrdinal], fromDate: nsDate)
+        updateCurrentDate()
+        components = calendar.components([.Year, .Month, .Day, .Weekday], fromDate: nsDate)
         let stringDate: String = ("\(components.year)\(delimiter)\(components.month)\(delimiter)\(components.day)")
         return stringDate
     }
     
     ///Returns a String, "date", which contains todays date in the format YYYY/MM/DD
-    func getCurrentDate()-> String
+    internal func getCurrentDate()-> String
     {
         updateCurrentDate()
         let stringDate: String = ("\(components.year)\(delimiter)\(components.month)\(delimiter)\(components.day)")
         return stringDate
     }
     
-    //returns an Int between 1-7, such that 1 = Sunday, 2 = Monday, etc.
-    func getDayOfWeek()-> Int{
-        let dayOfTheWeek = components.weekdayOrdinal
+    ///Returns an Int between 1-7, such that 1 = Sunday, 2 = Monday, etc.
+    internal func getDayOfWeek()-> Int
+    {
+        updateCurrentDate()
+        let dayOfTheWeek = components.weekday
         return dayOfTheWeek
     }
     
     ///Returns a dictionary of the past week with the date corresponding to the days of the week in the form [Int:NSDate]
-    func getCurrentWeek()-> [Int:NSDate]
+    internal func getCurrentWeek()-> [Int:NSDate]
     {
         updateCurrentDate()
         var thisWeekDictionary: [Int:NSDate] = [:]
@@ -61,6 +64,7 @@ class CalendarBrain
         
         let today = currentDate
         
+        //TODO: refactor to more efficiantly assign days of the week.
         let todayPlusOne = NSCalendar.currentCalendar().dateByAddingUnit(
             .Day,
             value: 1,
@@ -144,11 +148,11 @@ class CalendarBrain
         return thisWeekDictionary
     }
     
-    //Takes a String, "date", which should be a date in the form YYYY/MM/DD and returns true if it matches proposed date from another String
-    func compareDates(correctDate: NSDate, dateToCheck: String)-> Bool
+    ///Takes a String, "date", which should be a date in the form YYYY/MM/DD and returns true if it matches proposed date from another String
+    internal func compareDates(correctDate: NSDate, dateToCheck: String)-> Bool
     {
         updateCurrentDate()
-        let components = calendar.components([.Year, .Month, .Day, .WeekdayOrdinal], fromDate: correctDate)
+        let components = calendar.components([.Year, .Month, .Day, .Weekday], fromDate: correctDate)
         let dateSeparated = dateToCheck.componentsSeparatedByString(delimiter)
         
         if(components.year == Int(dateSeparated[0]))
@@ -164,8 +168,8 @@ class CalendarBrain
         return false
     }
     
-    //Takes a String, "date", which should be a date in the form YYYY/MM/DD and returns true if it matches today's date
-    func compareDate(date: String)-> Bool
+    ///Takes a String, "date", which should be a date in the form YYYY/MM/DD and returns true if it matches today's date
+    internal func compareDate(date: String)-> Bool
     {
         updateCurrentDate()
         let dateSeparated = date.componentsSeparatedByString(delimiter)

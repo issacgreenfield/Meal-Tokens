@@ -12,18 +12,18 @@ import Charts
 
 class StatsViewController: UIViewController
 {
-    @IBOutlet weak var statsChartView: BarChartView!
-    
     private var tokenCalculator: Double? = 0.0
     private var tokenDifficulty: Double? = 1.0
     private var date: [String]!
     private let defaults = NSUserDefaults.standardUserDefaults()
-    
+ 
+    @IBOutlet weak var statsChartView: BarChartView!
+
     @IBAction func dismissChartPage(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func setChart() {
+    private func setChart() {
         let calendarBrain = CalendarBrain(delimiter: "/")
         var tokensEarned = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         
@@ -46,7 +46,6 @@ class StatsViewController: UIViewController
         calendarBrain.getCurrentWeek()
         var statsData = defaults.dictionaryForKey("statsData")!
         var dateOfTheWeek: String
-        
         var dayOfTheWeek = 1
         while(dayOfTheWeek <= 7)
         {

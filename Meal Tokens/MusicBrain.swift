@@ -9,8 +9,8 @@
 import Foundation
 import AVFoundation
 
-/// A sound manager for wav files
-public class MusicBrain
+///This Class acts as a sound manager for wav files
+public struct MusicBrain
 {
     private var mySound: SystemSoundID
     
@@ -19,7 +19,7 @@ public class MusicBrain
         self.mySound = 0
     }
     
-    public func playAddTokens()
+    internal func playAddTokens()
     {
         let soundURL = NSBundle.mainBundle().URLForResource("coindropA", withExtension: "wav")
         var mySound: SystemSoundID = 0
@@ -27,7 +27,7 @@ public class MusicBrain
         AudioServicesPlaySystemSound(mySound);
     }
     
-    public func playUseTokens()
+    internal func playUseTokens()
     {
         let soundURL = NSBundle.mainBundle().URLForResource("nomnom", withExtension: "wav")
         var mySound: SystemSoundID = 0
